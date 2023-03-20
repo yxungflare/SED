@@ -51,10 +51,22 @@ def Rosomaha():
     return render_template('/htdocs/Rosomaha.html')
 
 
+# Инфа о Фантоме
+@app.route("/htdocs/Fantom.html")
+def Fantom():
+    return render_template('/htdocs/Fantom.html')
 
 
+# Инфа о Аккорде
+@app.route("/htdocs/Accord.html")
+def Accord():
+    return render_template('/htdocs/Accord.html')
 
 
+# Инфа о БлокХосте
+@app.route("/htdocs/BlockHost.html")
+def BlockHost():
+    return render_template('/htdocs/BlockHost.html')
 
 
 

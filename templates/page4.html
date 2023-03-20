@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Подтверждение</title>
+  <style>
+    /* Стили для блока загрузки */
+    #loading-screen {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    /* Стили для анимации */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Стили для спиннера */
+    #loading-spinner {
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      animation: rotate 1s linear infinite;
+      margin-bottom: 10px;
+    }
+
+    /* Стили для текста загрузки */
+    #loading-text {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Стили для картинки успеха */
+    #success-image {
+      display: none;
+      height: 250px;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+   //Блок загрузки
+  <div id="loading-screen">
+    <div id="loading-spinner"></div>
+    <div id="loading-text">Подтверждение...</div>
+    <img id="success-image" src="{{ url_for('static', filename='../static/etc/img/checked.png') }}" alt="Success!">
+  </div>
+
+  // JavaScript-код для отображения сообщения о завершении загрузки и закрытия сайта 
+  <script>
+    // Функция, которая будет вызываться через 1 секунд
+    function showSuccess() {
+      // Скрываем текст загрузки и спиннер
+      document.getElementById("loading-text").style.display = "none";
+      document.getElementById("loading-spinner").style.display = "none";
+
+      // Отображаем картинку успеха
+      document.getElementById("success-image").style.display = "block";
+    }
+
+    // Вызываем функцию через 1 секунд
+    setTimeout(showSuccess, 1000);
+
+    // Функция, которая будет вызываться через 2 секунд
+    function closeSite() {
+      // Закрываем сайт
+      window.close();
+    }
+
+    // Вызываем функцию через 2 секунд
+    setTimeout(closeSite, 2000);
+  </script>
+</body>
+</html>

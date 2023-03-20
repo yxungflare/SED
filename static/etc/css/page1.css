@@ -1,0 +1,59 @@
+body{
+    background-image:url("https://krot.info/uploads/posts/2020-01/thumbs/1579377484_6-13.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-blend-mode: color;
+    }
+.firstpage{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 00px;
+    font-weight: 900;
+    color:midnightblue;
+}
+input{
+    margin-left: 100px;
+    height: 20px;
+    border-width: 2px;
+    
+}
+
+#button{
+    margin-top: 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color:#3498D8;
+	border-bottom: 5px solid #2980B9;
+    height: 80px;
+    width: 400px;
+    font-weight: bold;
+    margin-left: 0px ;
+    border-top: none;
+	border-right: none;
+	border-left: none;
+}
+#button:hover
+{
+    background-color:#39a5e9;
+}
+.choose{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+#contact_name{
+    margin-left: 175px;
+}
+
+#main-form{
+    padding: 40px;
+    width: 500px;
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(243, 219, 236, 0.901);
+    border-radius: 15px;
+}

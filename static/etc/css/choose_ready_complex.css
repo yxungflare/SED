@@ -1,0 +1,22 @@
+* {
+    /* text-align: center; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url("https://krot.info/uploads/posts/2020-01/thumbs/1579377484_6-13.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+button {
+    /* text-align: left; */
+     /* margin-left: 35.7vh; */
+     /* margin-top: -80px; */
+
+    font-size: 27px;
+    padding: 10px;
+  }

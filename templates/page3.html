@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page3.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/range-slider.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page3_1.css') }} ">
+    <title>Оценка защищенности СЭД</title>
+</head>
+<body onload="icon_on()">
+    <!-- Форма считает, однако мат модель стоит изменить -->
+<form name="form1"  action="/estimate" method="POST" id="block-1">
+
+        <fieldset class="checkbox-group">
+            <legend class="checkbox-group-legend">Ваши средства защиты информации(СЗИ)</legend>
+            <div class="row">
+            <!-- СЗИ_1 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input" name="SZI1" {% if model in models %}checked{% endif %}/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_auntification" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Auntification.png') }} " alt="auntification">
+                        </span>
+                        <span class="checkbox-label" name="SZI1">Аутентификация пользователей и разделение доступа</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_2 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-1"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_authorED" id="icon_info-1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/ASupply.png') }}" alt="doc_accept">
+                        </span>
+                        <span class="checkbox-label">Подтверждение авторства ЭД</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_3 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-2"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_confidition" id="icon_info-2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Confidential.png') }}" alt="confiditial">
+                        </span>
+                        <span class="checkbox-label">Конфиденциальность электронного документа</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_4 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-3"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_uridictia" id="icon_info-3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon" >
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Juridical.png') }}" alt="ur_znach">
+                        </span>
+                        <span class="checkbox-label">Обеспечение юридической значимости ЭД</span>
+                    </span>
+                </label>
+            </div>
+            </div>
+            <div class="row">
+            <!-- СЗИ_5 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-4"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_integrity_control" id="icon_info-4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Integrity control.png') }}" alt="Control_PO">
+                        </span>
+                        <span class="checkbox-label">Контроль целостности используемого ПО</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_6 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-5"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_registration_actions" id="icon_info-5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/event registration.png') }}" alt="register_actions">
+                        </span>
+                        <span class="checkbox-label">Регистрация событий в информационных системах</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_7 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-6"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_cryptography" id="icon_info-6"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/cryptography.png') }}" alt="crypto_defense">
+                        </span>
+                        <span class="checkbox-label">Криптографическая защита</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_8 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-7"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_firewall" id="icon_info-7"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Firewall.png') }}" alt="mezhset">
+                        </span>
+                        <span class="checkbox-label">Межсетевое экранирование</span>
+                    </span>
+                </label>
+            </div>
+            </div>
+
+            <div class="row">
+            <!-- СЗИ_9 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-8"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_vpn" id="icon_info-8"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/VPN.png') }}" alt="VPN">
+                        </span>
+                        <span class="checkbox-label">Виртуальные частные сети</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_10 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-9"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_antivirus" id="icon_info-9"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/antivirus.png') }}" alt="antivirus">
+                        </span>
+                        <span class="checkbox-label">Антивирусная защита</span>
+                    </span>
+                </label>
+            </div>
+            <!-- СЗИ_11 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-10"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_audit" id="icon_info-10"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/audit.png') }}" alt="antauditivirus">
+                        </span>
+                        <span class="checkbox-label">Аудит информационной безопасности</span>
+                    </span>
+                </label>
+            </div>
+            </div>
+        </fieldset>
+
+            <div class="col-6">
+                <nav>
+                    <ul class="navigation d-flex justify-content-around">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="page2.html" style="margin-top: 0;"> Назад</button></a>
+                        </li>
+
+                        <li class="navigation-item1">
+                            <button type="submit" id="countChecked" class="navigation-link1"> Оценить </button> <br>
+                        </li>
+                        
+
+                        <li class="navigation-item2">
+                            <div class="add__botton">
+                                <a href="#popup" class="add">Добавить</a>
+                            </div>
+                            <div class="delete__botton">
+                                <a href="#popup2" class="delete">Удалить</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+   
+
+<!-- =============================================ДОБАВЛЕНИЕ======================================================= -->
+    <div id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title"> Ваше СЗИ </div>
+                <div class="popup__text">
+                    <form name="publish">
+                        <div class="add_form">
+                            <div class="add__input">
+                                <input type="text" size="57" name="message" id="add__titlename" placeholder="Название..."><br>
+                            
+                                <input type="number" name="Цена" id="add__price" placeholder="Цена..."> <br>
+
+                                <span style="font-size: 24px;"><b>Какую угрозу покрывает СЗИ? </b></span>
+                                <div style="display: block; width:250px; height:150px; overflow:auto; border:solid 1px #C3E4FE;">
+                                    <input type="checkbox"/> Фишинг <br>
+                                    <input type="checkbox" /> Социальная инженерия <br>
+                                    <input type="checkbox" /> DOS/DDOS атаки <br>
+                                    <input type="checkbox" /> Smurf-атаки <br>
+                                    <input type="checkbox" /> UDP Storm <br>
+                                    <input type="checkbox" /> UDP Bomb <br>
+                                    <input type="checkbox" /> Почтовая бомбёжка <br>
+                                    <input type="checkbox" /> Сниффинг <br>
+                                    <input type="checkbox" /> IP хайджек <br>
+                                    <input type="checkbox" /> Ложный DNS Сервер <br>
+                                    <input type="checkbox" /> Спуфинг <br>
+                                    <input type="checkbox" /> Ошибки ПО <br>
+                                    <input type="checkbox" /> Вирусы <br>
+                                    <input type="checkbox" /> Ошибки персонала <br>
+                                </div>
+
+
+                            </div>
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate" onclick="test();"> <b> Добавить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ==================================================================================================== -->
+
+
+<!-- =============================================УДАЛЕНИЕ======================================================= -->
+
+    <div id="popup2" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Удаление СЗИ</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="choose__requirement">
+                            <span style="font-size: 30px;"> Удаление применится только к последнему средству защиты информации!</span>
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate" id="clear"> <b> Удалить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ==================================================================================================== -->
+
+<!-- onsubmit="window.location.href='/etc/py/page4.html'" -->
+<!-- ==================================================ВЫБОР МОДЕЛИ СЗИ АУНТИФИКАЦИИ================================================== -->
+<form name="podform" action="/" method="post">
+    <!-- СЗИ_1 -->
+    <div id="popup_info_auntification" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Выберете модель СЗИ</div>
+                <div class="popup__text">
+
+                    <div class="row">
+                            <!-- СЗИ 1 -->
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper"  onclick="icon_on()">
+                                    <input type="radio" name="model" value="Sobol" class="checkbox-input" id="checkbox-input1_1" {% if 'Sobol' in models %}checked{% endif %}>
+                                    <span class="checkbox-tile">
+                                        <a href="/htdocs/Sobol.html" id="icon_info-1_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                        <span class="checkbox-icon">
+                                            <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Sobol.png') }} " alt="Sobol">
+                                        </span>
+                                        <span class="checkbox-label">ПАК «Соболь»</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                            
+                            <!-- СЗИ 2 -->
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper"  onclick="icon_on()">
+                                    <input type="radio" name="model" value="Rosomaha" class="checkbox-input" id="checkbox-input1_2"/>
+                                    <span class="checkbox-tile">
+                                        <a href="/htdocs/Rosomaha.html" id="icon_info-1_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                        <span class="checkbox-icon">
+                                            <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Rosomaha.jpg') }}" alt="Rosomaha">
+                                        </span>
+                                        <span class="checkbox-label">ПАК «Росомаха»</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                            
+                            <!-- СЗИ 3 -->
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper"  onclick="icon_on()">
+                                    <input type="radio" name="model" value="Fantom" class="checkbox-input" id="checkbox-input1_3"/>
+                                    <span class="checkbox-tile">
+                                        <a href="#" id="icon_info-1_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                        <span class="checkbox-icon">
+                                            <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Fantom.png') }}" alt="Fantom">
+                                        </span>
+                                        <span class="checkbox-label">СЗИ от НСД Фантом</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <!-- !!!!!!!!!!!!!!!!!!!!!! --> 
+                    </div>
+                
+                    <div class="row">
+
+                        <!-- Прописать Высвечивание иконки... -->
+
+
+                        <!-- СЗИ 4 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model" value="Accord" class="checkbox-input" id="checkbox-input1_4"/>
+                                <span class="checkbox-tile">
+                                    <a href="#" id="icon_info-1_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Accord.jpg') }}" alt="Accord">
+                                    </span>
+                                    <span class="checkbox-label">ПАК «Аккорд-В.»</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <!-- СЗИ 5 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model" value="BlockHost" class="checkbox-input" id="checkbox-input1_5"/>
+                                <span class="checkbox-tile">
+                                    <a href="#" id="icon_info-1_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/BlockHost.webp') }}" alt="BlockHost">
+                                    </span>
+                                    <span class="checkbox-label">Блокхост-Сеть</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                                <button type="submit" id="clear" class="add__requirement" onclick="showSpinner();" target="_blank"> <b> Подтвердить </b></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- СЗИ_2 -->
+    <div id="popup_info_authorED" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Выберете модель СЗИ</div>
+                <div class="popup__text">
+                    
+                    <div class="row">
+                        <!-- СЗИ 1 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model" value="Sobol" class="checkbox-input" id="checkbox-input1_1" {% if 'Sobol' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="etc\models_desc\Sobol.html" id="icon_info-1_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Sobol.png') }} " alt="Sobol">
+                                    </span>
+                                    <span class="checkbox-label">Secret Disk 5</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <!-- СЗИ 2 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model" value="Rosomaha" class="checkbox-input" id="checkbox-input1_2"/>
+                                <span class="checkbox-tile">
+                                    <a href="etc\models_desc\Rosomaha.html" id="icon_info-1_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Rosomaha.jpg') }}" alt="Rosomaha">
+                                    </span>
+                                    <span class="checkbox-label">VipNet HSM</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <!-- СЗИ 3 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model" value="Fantom" class="checkbox-input" id="checkbox-input1_3"/>
+                                <span class="checkbox-tile">
+                                    <a href="#" id="icon_info-1_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Fantom.png') }}" alt="Fantom">
+                                    </span>
+                                    <span class="checkbox-label">Рутокен</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! --> 
+                </div>
+            
+                <div class="row">
+
+                    <!-- Прописать Высвечивание иконки... -->
+
+
+                    <!-- СЗИ 4 -->
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper"  onclick="icon_on()">
+                            <input type="radio" name="model" value="Accord" class="checkbox-input" id="checkbox-input1_4"/>
+                            <span class="checkbox-tile">
+                                <a href="#" id="icon_info-1_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                <span class="checkbox-icon">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Accord.jpg') }}" alt="Accord">
+                                </span>
+                                <span class="checkbox-label">КриптоПРО</span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+
+                    <!-- СЗИ 5 -->
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper"  onclick="icon_on()">
+                            <input type="radio" name="model" value="BlockHost" class="checkbox-input" id="checkbox-input1_5"/>
+                            <span class="checkbox-tile">
+                                <a href="#" id="icon_info-1_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                <span class="checkbox-icon">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/BlockHost.webp') }}" alt="BlockHost">
+                                </span>
+                                <span class="checkbox-label">VipNet PKI Client</span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                            <button type="submit" id="clear" class="add__requirement" onclick="showSpinner();" target="_blank"> <b> Подтвердить </b></button>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_3 -->
+    <div id="popup_info_confidition" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения о конфидициальности электронного документа</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">«КАРМА»</option>
+                                    <option value="pakRosomaha">EDSIGN</option>
+                                    <option value="fantom">СЗИ от НСД Фантом</option>
+                                    <option value="accordB">ПАК «Аккорд-В.»</option>
+                                    <option value="blockHost">Блокхост-Сеть</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_4 -->
+    <div id="popup_info_uridictia" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения об обеспечении электронного документа юридической значимости</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">Контур</option>
+                                    <option value="pakRosomaha">WiseadviceIT</option>
+                                    <option value="fantom">Directum</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_5 -->
+    <div id="popup_info_integrity_control" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения о контроле целостности используемого ПО</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">Secret Net Studio</option>
+                                    <option value="pakRosomaha">Efros Config Inspector</option>
+                                    <option value="fantom">ViPNet SafeBoot</option>
+                                    <option value="accordB">СДЗ Dallas Lock</option>
+                                    <option value="blockHost">ПМ «Паспорт ПО»</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_6 -->
+    <div id="popup_info_registration_actions" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения о регистрации событий в инфо-системах</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">LogRhythm SIEM</option>
+                                    <option value="pakRosomaha">Платформа мониторинга ИБ Visor</option>
+                                    <option value="fantom">Fortinet FortiSIEM</option>
+                                    <option value="accordB">MaxPatrol SIEM</option>
+                                    <option value="blockHost">СёрчИнформ SIEM</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_7 -->
+    <div id="popup_info_cryptography" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения о криптографической защите</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">Secret Disk Enterprise</option>
+                                    <option value="pakRosomaha">КриптоАРМ</option>
+                                    <option value="fantom">Крипто БД</option>
+                                    <option value="accordB">ПКЗ 2020</option>
+                                    <option value="blockHost">Палиндром</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_8 -->
+    <div id="popup_info_firewall" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения о межсетевом экранировании</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">Traffic Inspector Next Generation</option>
+                                    <option value="pakRosomaha">Ideco UTM</option>
+                                    <option value="fantom">TrustAccess</option>
+                                    <option value="accordB">ALTELL NEO</option>
+                                    <option value="blockHost">Континент</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_9 -->
+    <div id="popup_info_vpn" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения о виртуальных частных сетях</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">Kaspersky Internet Security</option>
+                                    <option value="pakRosomaha">Avast! SecureLine VPN</option>
+                                    <option value="fantom">NordVPN</option>
+                                    <option value="accordB">Astrill VPN</option>
+                                    <option value="blockHost">Surfshark VPN</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_10 -->
+    <div id="popup_info_antivirus" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения об антивирусной защите</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">Касперский</option>
+                                    <option value="pakRosomaha">Mc caffee</option>
+                                    <option value="fantom">Dr. web</option>
+                                    <option value="accordB"></option>
+                                    <option value="blockHost">Блокхост-Сеть</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        <div class="choose__requirement">
+                            <div class="add__but">
+                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- СЗИ_11 -->
+    <div id="popup_info_audit" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <div class="popup__title">Сведения об аудите информационной безопасности</div>
+                <div class="popup__text">
+                    <form>
+                        <div class="formOfModalA">
+                            <div class="firstlineModalA">
+                                <select name="model" class="modalAuntification">
+                                    <option value="choose">Выберете модель</option>
+                                    <option value="pakSobol">ПАК «Соболь»</option>
+                                    <option value="pakRosomaha">ПАК «Росомаха»</option>
+                                    <option value="fantom">СЗИ от НСД Фантом</option>
+                                    <option value="accordB">ПАК «Аккорд-В.»</option>
+                                    <option value="blockHost">Блокхост-Сеть</option>
+                                </select>
+                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
+                            </div>
+                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                        </div>
+                        
+                            <div class="add__but">
+                                <button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+</form>
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+<!-- ==================================================================================================== -->
+
+
+
+<!-- КОНЕЦ -->
+<script src="{{ url_for('static', filename='../static/etc/libs/nouislider.min.js') }} "></script>
+<script src="{{ url_for('static', filename='../static/etc/js/range-slider.js') }} "></script>
+<script src="{{ url_for('static', filename='../static/etc/js/page3.js') }} "></script>
+<script src="{{ url_for('static', filename='../static/etc/js/processing_dop_form.js') }} "></script>
+</body>
+</html>

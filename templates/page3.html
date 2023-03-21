@@ -271,7 +271,7 @@
     <div id="popup_info_auntification" class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
+                <a href="#" class="popup__close">X</a>
                 <div class="popup__title">Выберете модель СЗИ</div>
                 <div class="popup__text">
 
@@ -279,7 +279,7 @@
                             <!-- СЗИ 1 -->
                             <div class="checkbox">
                                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                                    <input type="radio" name="model" value="Sobol" class="checkbox-input" id="checkbox-input1_1" {% if 'Sobol' in models %}checked{% endif %}>
+                                    <input type="radio" name="model" value="Sobol" class="checkbox-input" id="checkbox-input1_1" {% if 'Sobol' in models %}checked{% endif %}/>
                                     <span class="checkbox-tile">
                                         <a href="/htdocs/Sobol.html" id="icon_info-1_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                         <span class="checkbox-icon">
@@ -294,7 +294,7 @@
                             <!-- СЗИ 2 -->
                             <div class="checkbox">
                                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                                    <input type="radio" name="model" value="Rosomaha" class="checkbox-input" id="checkbox-input1_2"/>
+                                    <input type="radio" name="model" value="Rosomaha" class="checkbox-input" id="checkbox-input1_2" {% if 'Rosomaha' in models %}checked{% endif %}/>
                                     <span class="checkbox-tile">
                                         <a href="/htdocs/Rosomaha.html" id="icon_info-1_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                         <span class="checkbox-icon">
@@ -309,7 +309,7 @@
                             <!-- СЗИ 3 -->
                             <div class="checkbox">
                                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                                    <input type="radio" name="model" value="Fantom" class="checkbox-input" id="checkbox-input1_3"/>
+                                    <input type="radio" name="model" value="Fantom" class="checkbox-input" id="checkbox-input1_3" {% if 'Fantom' in models %}checked{% endif %}/>
                                     <span class="checkbox-tile">
                                         <a href="/htdocs/Fantom.html" id="icon_info-1_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                         <span class="checkbox-icon">
@@ -330,7 +330,7 @@
                         <!-- СЗИ 4 -->
                         <div class="checkbox">
                             <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="Accord" class="checkbox-input" id="checkbox-input1_4"/>
+                                <input type="radio" name="model" value="Accord" class="checkbox-input" id="checkbox-input1_4" {% if 'Accord' in models %}checked{% endif %}/>
                                 <span class="checkbox-tile">
                                     <a href="/htdocs/Accord.html" id="icon_info-1_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                     <span class="checkbox-icon">
@@ -345,7 +345,7 @@
                         <!-- СЗИ 5 -->
                         <div class="checkbox">
                             <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="BlockHost" class="checkbox-input" id="checkbox-input1_5"/>
+                                <input type="radio" name="model" value="BlockHost" class="checkbox-input" id="checkbox-input1_5" {% if 'BlockHost' in models %}checked{% endif %}/>
                                 <span class="checkbox-tile">
                                     <a href="/htdocs/BlockHost.html" id="icon_info-1_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                     <span class="checkbox-icon">
@@ -387,11 +387,11 @@
                         <!-- СЗИ 1 -->
                         <div class="checkbox">
                             <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="Sobol" class="checkbox-input" id="checkbox-input1_1" {% if 'Sobol' in models %}checked{% endif %}>
+                                <input type="radio" name="model" value="SecretDisk" class="checkbox-input" id="checkbox-input2_1" >
                                 <span class="checkbox-tile">
-                                    <a href="etc\models_desc\Sobol.html" id="icon_info-1_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <a href="#" id="icon_info-1_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                     <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Sobol.png') }} " alt="Sobol">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/SecretDisk.jpg') }} " alt="Sobol">
                                     </span>
                                     <span class="checkbox-label">Secret Disk 5</span>
                                 </span>
@@ -402,13 +402,13 @@
                         <!-- СЗИ 2 -->
                         <div class="checkbox">
                             <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="Rosomaha" class="checkbox-input" id="checkbox-input1_2"/>
+                                <input type="radio" name="model" value="VipNet" class="checkbox-input" id="checkbox-input2_2"/>
                                 <span class="checkbox-tile">
                                     <a href="etc\models_desc\Rosomaha.html" id="icon_info-1_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                     <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Rosomaha.jpg') }}" alt="Rosomaha">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/ViPNet.jpg') }}" alt="Rosomaha">
                                     </span>
-                                    <span class="checkbox-label">VipNet HSM</span>
+                                    <span class="checkbox-label">ViPNet HSM</span>
                                 </span>
                             </label>
                         </div>
@@ -417,11 +417,11 @@
                         <!-- СЗИ 3 -->
                         <div class="checkbox">
                             <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="Fantom" class="checkbox-input" id="checkbox-input1_3"/>
+                                <input type="radio" name="model" value="Rutoken" class="checkbox-input" id="checkbox-input2_3"/>
                                 <span class="checkbox-tile">
                                     <a href="#" id="icon_info-1_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                     <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Fantom.png') }}" alt="Fantom">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Rutoken.webp') }}" alt="Fantom">
                                     </span>
                                     <span class="checkbox-label">Рутокен</span>
                                 </span>
@@ -438,11 +438,11 @@
                     <!-- СЗИ 4 -->
                     <div class="checkbox">
                         <label class="checkbox-wrapper"  onclick="icon_on()">
-                            <input type="radio" name="model" value="Accord" class="checkbox-input" id="checkbox-input1_4"/>
+                            <input type="radio" name="model" value="Cryptopro" class="checkbox-input" id="checkbox-input2_4"/>
                             <span class="checkbox-tile">
                                 <a href="#" id="icon_info-1_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                 <span class="checkbox-icon">
-                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Accord.jpg') }}" alt="Accord">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/CryptoPRO.webp') }}" alt="Accord">
                                 </span>
                                 <span class="checkbox-label">КриптоПРО</span>
                             </span>
@@ -453,11 +453,11 @@
                     <!-- СЗИ 5 -->
                     <div class="checkbox">
                         <label class="checkbox-wrapper"  onclick="icon_on()">
-                            <input type="radio" name="model" value="BlockHost" class="checkbox-input" id="checkbox-input1_5"/>
+                            <input type="radio" name="model" value="PKIClient" class="checkbox-input" id="checkbox-input2_5"/>
                             <span class="checkbox-tile">
                                 <a href="#" id="icon_info-1_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                                 <span class="checkbox-icon">
-                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/BlockHost.webp') }}" alt="BlockHost">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/PKIClient.jpg') }}" alt="BlockHost">
                                 </span>
                                 <span class="checkbox-label">VipNet PKI Client</span>
                             </span>

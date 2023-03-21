@@ -23,7 +23,7 @@ def choose_model():
             if len(models) > 1 and model in ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']:
                 del models[0]
             print(models)
-    return render_template('page3.html', model=model, models=models)
+    return render_template('page3.html', models=models, model=model)
 
 
 @app.route("/page2.html")

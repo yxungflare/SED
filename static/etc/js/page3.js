@@ -62,7 +62,7 @@ function clearFunction(){
 //   }
 // });
 
-icon_on();
+// icon_on();
 
 function icon_on(){
   if(document.getElementById('checkbox-input').checked == true){
@@ -151,7 +151,7 @@ function icon_on(){
   else{
     document.getElementById('icon_info-10').style.display='none';
   }
-   // Для выбора конкретной модели
+   // Для выбора конкретной модели СЗИ1
   if(document.getElementById('checkbox-input1_1').checked == true){
     document.getElementById('icon_info-1_1').style.display='block';
   }
@@ -181,6 +181,38 @@ function icon_on(){
   }
   else{
     document.getElementById('icon_info-1_5').style.display='none';
+  }
+
+   // Для выбора конкретной модели СЗИ2
+  if(document.getElementById('checkbox-input2_1').checked == true){
+    document.getElementById('icon_info-2_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-2_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input2_2').checked == true){
+    document.getElementById('icon_info-2_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-2_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input2_3').checked == true){
+    document.getElementById('icon_info-2_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-2_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input2_4').checked == true){
+    document.getElementById('icon_info-2_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-2_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input2_5').checked == true){
+    document.getElementById('icon_info-2_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-2_5').style.display='none';
   }
 }
 

@@ -250,3 +250,10 @@ function showSpinner(){
 }
 
 
+function checkAnySelected() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  var anySelected = Array.prototype.slice.call(checkboxes).some(function(checkbox) {
+    return checkbox.checked;
+  });
+  return anySelected;
+}

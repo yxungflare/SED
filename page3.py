@@ -13,17 +13,26 @@ def index():
     return render_template('page3.html')
 
 
-# Обработка СЗИ_1
+# Обработка СЗИ
 @app.route("/", methods=['POST', 'GET'])
 def choose_model():
     if request.method == 'POST':
         model = request.form.get('model')
         if model not in models:
             models.append(model)
+            # Проверяем уникальность для СЗИ 1
             if len(models) > 1 and model in ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']:
-                del models[0]
+                for m in models:
+                    if m != model and m in ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']:
+                        del models[models.index(m)]
+            # СЗИ 2
+            elif len(models) > 1 and model in ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']:
+                for m in models:
+                    if m != model and m in ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']:
+                        del models[models.index(m)]
             print(models)
-    return render_template('page3.html', models=models, model=model)
+            
+        return render_template('page3.html', models=models, model=model)
 
 
 @app.route("/page2.html")
@@ -68,6 +77,35 @@ def Accord():
 def BlockHost():
     return render_template('/htdocs/BlockHost.html')
 
+
+# Инфа о БлокХосте
+@app.route("/htdocs/SecretDisk.html")
+def SecretDisk():
+    return render_template('/htdocs/SecretDisk.html')
+
+
+# Инфа о ВипНет
+@app.route("/htdocs/VipNet.html")
+def VipNet():
+    return render_template('/htdocs/VipNet.html')
+
+
+# Инфа о Рутокен
+@app.route("/htdocs/Rutoken.html")
+def Rutoken():
+    return render_template('/htdocs/Rutoken.html')
+
+
+# Инфа о КриптоПро
+@app.route("/htdocs/Cryptopro.html")
+def Cryptopro():
+    return render_template('/htdocs/Cryptopro.html')
+
+
+# Инфа о ПКИ Клиент
+@app.route("/htdocs/PKIClient.html")
+def PKIClient():
+    return render_template('/htdocs/PKIClient.html')
 
 
 @app.route("/page4.html", methods=['POST', 'GET'])

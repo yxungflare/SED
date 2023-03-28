@@ -1,9 +1,37 @@
-from flask import Flask, request, render_template
-from SZI_INFO import *
+from flask import Flask, request, render_template, g
+from SZI_INFO import FDataBase
+import sqlite3
+import os
 
+DATABASE = 'SZI.db'
+SECRET_KEY = 'ffrfrmeknsdnsvkjk3nbhjzzzz'
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ffrfrmeknsdnsvkjk3nbhjzzzz'
+app.config.from_object(__name__)
+
+# Переопределяем путь к бд
+app.config.update(dict(DATABASE=os.path.join(app.root_path, 'SZI.db')))
+
+
+def connect_db():
+    conn = sqlite3.connect(app.config['DATABASE'])
+    conn.row_factory = sqlite3.Row
+    return conn
+
+def create_db():
+    db = connect_db()
+    with app.open_resource('create_table.sql', mode='r') as f:
+        db.cursor().executescript(f.read())
+    db.commit()
+    db.close()
+
+
+def get_db():
+    # Соединение с бд, если не было установлено
+    if not hasattr(g, 'link_db'):
+        g.link_db = connect_db()
+    return g.link_db
+
 
 models = []
 
@@ -16,8 +44,17 @@ def index():
 # Обработка СЗИ
 @app.route("/", methods=['POST', 'GET'])
 def choose_model():
+    db = get_db()
+    dbase = FDataBase(db)
+    print(dbase.getMenu())
     if request.method == 'POST':
-        model = request.form.get('model')
+        SZI1 = request.form.get('model')
+        SZI2 = request.form.get('model2')
+        if SZI1:
+            model = SZI1
+        if SZI2:
+            model = SZI2
+
         if model not in models:
             models.append(model)
             # Проверяем уникальность для СЗИ 1
@@ -35,17 +72,27 @@ def choose_model():
         return render_template('page3.html', models=models, model=model)
 
 
+@app.teardown_appcontext
+def close_db(error):
+    # разрываем соединение, если его не было
+    if hasattr(g, 'link_db'):
+        g.link_db.close()
+
+
 @app.route("/page2.html")
 def choose_window():
     return render_template('page2.html')
 
+
 # Полная обработка
+# Нужно проработать: удалить элемент массива, если чекбокс не выбран 
+
 @app.route("/estimate", methods=['POST'])
 def estimate():
     if request.method == 'POST':
-        # print(list(request.form)[0]) 
+        print(models)
         if list(request.form)[0]:
-            return render_template('estimate.html', model=models)
+            return render_template('estimate.html', models=models)
     
 
 # Инфа о Соболе
@@ -111,6 +158,8 @@ def PKIClient():
 @app.route("/page4.html", methods=['POST', 'GET'])
 def success_window():
     return render_template('page4.html')
+
+
 
 
 if __name__ == '__main__':

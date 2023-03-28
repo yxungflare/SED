@@ -1,9 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Result</title>
+	<meta charset="UTF-8">
+	<title>Сформированный КСЗ</title>
 </head>
+<style>
+    body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	padding: 20px;
+	background-color: #003366;
+	color: #fff;
+	text-align: center;
+}
+
+#graph {
+	float: right;
+	width: 66%;
+	height: 550px;
+	background-color: #eee;
+}
+
+#sidebar {
+	float: left;
+	width: 33%;
+	background-color: #f5f5f5;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-left: 30px;/* list-style: none; */
+	padding: 5px 0;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+p {
+	margin: 0;
+	padding: 5px 0;
+}
+</style>
 <body>
-    <p>Спасибо, что выбрали {{ model }}</p>
+	<h1>Сформированный КСЗ</h1>
+	<div id="graph" style="text-align: center;">
+        <h2 style="margin-top:1%;">График</h2>
+        <img src="{{ url_for('static', filename='../static/etc/img/my_plot.png') }}" alt="">
+    </div>
+	<div id="sidebar">
+		<h2>Выбранные СЗИ:</h2>
+		<ul>
+			{% for SZI in models %}
+            <li >{{SZI}}</li>
+            {% endfor %}
+		</ul>
+		<h2>Какие угрозы покрываются и с какой эффективностью?</h2>
+		<ul>
+			<li>Угроза 1 (эффективность 80%)</li>
+			<li>Угроза 2 (эффективность 90%)</li>
+			<li>Угроза 3 (эффективность 70%)</li>
+		</ul>
+		<h2>Общая надежность КСЗ: 95%</h2>
+		<!-- <p></p> -->
+		<h2>Цена КСЗ: 1000 Р</h2>
+		<!-- <p></p> -->
+	</div>
 </body>
 </html>

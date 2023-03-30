@@ -22,7 +22,7 @@ h1 {
 #graph {
 	float: right;
 	width: 66%;
-	height: 550px;
+	height: 100%;
 	background-color: #eee;
 }
 
@@ -57,7 +57,8 @@ p {
 	<h1>Сформированный КСЗ</h1>
 	<div id="graph" style="text-align: center;">
         <h2 style="margin-top:1%;">График</h2>
-        <img src="{{ url_for('static', filename='../static/etc/img/my_plot.png') }}" alt="">
+        <img src="{{ url_for('static', filename='../static/etc/img/graph1.png') }}" style="margin-bottom: 1%;" alt="">
+		<img src="{{ url_for('static', filename='../static/etc/img/graph2.png') }}" style="margin-bottom: 1%;" alt="">
     </div>
 	<div id="sidebar">
 		<h2>Выбранные СЗИ:</h2>

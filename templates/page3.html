@@ -19,20 +19,20 @@
             <!-- СЗИ_1 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input" {% if 'Sobol' in models or 'Rosomaha' in models or 'Fantom' in models or 'Accord' in models or 'BlockHost' in models %}checked{% endif %}/>
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input" name="SZI1" {% if 'Sobol' in models or 'Rosomaha' in models or 'Fantom' in models or 'Accord' in models or 'BlockHost' in models %}checked{% endif %}/>
                     <span class="checkbox-tile">
                         <a href="#popup_info_auntification" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Auntification.png') }} " alt="auntification">
                         </span>
-                        <span class="checkbox-label" name="SZI1">Аутентификация пользователей и разделение доступа</span>
+                        <span class="checkbox-label" >Аутентификация пользователей и разделение доступа</span>
                     </span>
                 </label>
             </div>
             <!-- СЗИ_2 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-1" {% if 'VipNet' in models or 'SecretDisk' in models or 'Cryptopro' in models or 'Rutoken' in models or 'PKIClient' in models %}checked{% endif %}/>
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-1" name="SZI2" {% if 'VipNet' in models or 'SecretDisk' in models or 'Cryptopro' in models or 'Rutoken' in models or 'PKIClient' in models %}checked{% endif %}/>
                     <span class="checkbox-tile">
                         <a href="#popup_info_authorED" id="icon_info-1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">

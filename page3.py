@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, g
-from SZI_INFO import SZI_models
+from SZI_INFO import *
 import os
 
 SECRET_KEY = 'ffrfrmeknsdnsvkjk3nbhjzzzz'
@@ -8,6 +8,11 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 models = []
+update_models = []
+
+def clear_update_models():
+    pass
+
 
 @app.route("/")
 def index():
@@ -17,26 +22,36 @@ def index():
 # Обработка СЗИ
 @app.route("/", methods=['POST', 'GET'])
 def choose_model():
-    if 'model' in request.form:
-        model = request.form.getlist('model')[-1]
-    elif 'model2' in request.form:
-        model = request.form.getlist('model2')[-1]
-
-        if model not in models:
-            models.append(model)
-            # Проверяем уникальность для СЗИ 1
-            if len(models) > 1 and model in ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']:
-                for m in models:
-                    if m != model and m in ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']:
-                        del models[models.index(m)]
-            # СЗИ 2
-            elif len(models) > 1 and model in ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']:
-                for m in models:
-                    if m != model and m in ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']:
-                        del models[models.index(m)]
-            print(models)
-
-        return render_template('page3.html', models=models, model=model)
+    model = request.form.get('model') 
+    model2 = request.form.get('model2')
+    print(request.form)
+    print(model, model2)
+    # СЗИ 1
+    if model not in models and model and model != 'choose':
+        models.append(model)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model]
+        # Проверяем уникальность для СЗИ 1
+        if len(models) > 1 and model in model_set_1:
+            for m in models:
+                if m != model and m in model_set_1:
+                    for elem in update_models:
+                        if elem[0] != model and elem[0] in model_set_1:
+                            del update_models[update_models.index(elem)] 
+                    del models[models.index(m)]
+    # СЗИ 2
+    if model2 not in models and model2 and model2 != 'choose':
+        models.append(model2)
+        if len(models) > 1 and model2 in model_set_2:
+            for m in models:
+                if m != model2 and m in model_set_2:
+                    for elem in update_models:
+                        if elem[0] != model2 and elem[0] in model_set_2:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model2]
+    print(models)
+    print(update_models)
+    return render_template('page3.html', models=models, model=model, model2=model2)
 
 
 @app.route("/page2.html")

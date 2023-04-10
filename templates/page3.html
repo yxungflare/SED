@@ -45,16 +45,17 @@
             <!-- СЗИ_3 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-2">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-2" name="SZI3" {% if 'CryptoGOST' in models or 'CryptoARM' in models or 'CryptoproZIP' in models or 'ZashitaEDO' in models or 'CryptoproCSP' in models %}checked{% endif %}/>
                     <span class="checkbox-tile">
                         <a href="#popup_info_confidition" id="icon_info-2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
-                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Confidential.png') }}" alt="confiditial">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Confidential.png') }}" alt="doc_accept">
                         </span>
                         <span class="checkbox-label">Конфиденциальность электронного документа</span>
                     </span>
                 </label>
             </div>
+
             <!-- СЗИ_4 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
@@ -472,38 +473,102 @@
         </div>
     </div>
     <!-- СЗИ_3 -->
+    <!-- if 'CryptoGOST' in models or 'CryptoARM' in models or 'CryptoproZIP' in models or 'ZashitaEDO' in models or 'CryptoproCSP' -->
+
     <div id="popup_info_confidition" class="popup">
         <a href="#" class="popup__area"></a>
         <div class="popup__body">
             <div class="popup__content">
                 <a href="#" class="popup__close" onclick="visibleOn()">X</a>
-                <div class="popup__title">Сведения о конфидициальности электронного документа</div>
+                <div class="popup__title">Выберете модель СЗИ</div>
                 <div class="popup__text">
-                    <form>
-                        <div class="formOfModalA">
-                            <div class="firstlineModalA">
-                                <select name="model" class="modalAuntification">
-                                    <option value="choose">Выберете модель</option>
-                                    <option value="pakSobol">«КАРМА»</option>
-                                    <option value="pakRosomaha">EDSIGN</option>
-                                    <option value="fantom">СЗИ от НСД Фантом</option>
-                                    <option value="accordB">ПАК «Аккорд-В.»</option>
-                                    <option value="blockHost">Блокхост-Сеть</option>
-                                </select>
-                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
-                            </div>
-                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                    
+                    <div class="row">
+                        <!-- модель 1 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model3" value="SecretDisk" class="checkbox-input" id="checkbox-input3_1" {% if 'SecretDisk' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="/htdocs/SecretDisk.html" id="icon_info-3_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/SecretDisk.jpg') }} " alt="Sobol">
+                                    </span>
+                                    <span class="checkbox-label">«КАРМА»</span>
+                                </span>
+                            </label>
                         </div>
-                        <div class="choose__requirement">
-                            <div class="add__but">
-                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
-                            </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <!-- модель 2 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model3" value="VipNet" class="checkbox-input" id="checkbox-input3_2" {% if 'VipNet' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="/htdocs/VipNet.html" id="icon_info-3_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/ViPNet.jpg') }}" alt="Rosomaha">
+                                    </span>
+                                    <span class="checkbox-label">EDSIGN</span>
+                                </span>
+                            </label>
                         </div>
-                    </form>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <!-- модель 3 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model3" value="Rutoken" class="checkbox-input" id="checkbox-input3_3" {% if 'Rutoken' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="/htdocs/Rutoken.html" id="icon_info-3_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Rutoken.webp') }}" alt="Fantom">
+                                    </span>
+                                    <span class="checkbox-label">КриптоГОСТ</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! --> 
+                </div>
+            
+                <div class="row">
+
+                    <!-- модель 4 -->
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper"  onclick="icon_on()">
+                            <input type="radio" name="model3" value="Cryptopro" class="checkbox-input" id="checkbox-input3_4" {% if 'Cryptopro' in models %}checked{% endif %}>
+                            <span class="checkbox-tile">
+                                <a href="/htdocs/Cryptopro.html" id="icon_info-3_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                <span class="checkbox-icon">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/CryptoPRO.webp') }}" alt="Accord">
+                                </span>
+                                <span class="checkbox-label">КриптоПРО Zip</span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+
+                    <!-- модель 5 -->
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper"  onclick="icon_on()">
+                            <input type="radio" name="model3" value="PKIClient" class="checkbox-input" id="checkbox-input3_5" {% if 'PKIClient' in models %}checked{% endif %}>
+                            <span class="checkbox-tile">
+                                <a href="/htdocs/PKIClient.html" id="icon_info-3_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                <span class="checkbox-icon">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/PKIClient.jpg') }}" alt="BlockHost">
+                                </span>
+                                <span class="checkbox-label">КриптоАРМ</span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                            <button type="submit" id="clear" class="add__requirement" onclick="showSpinner();" target="_blank"> <b> Подтвердить </b></button>
+                </div>
+
                 </div>
             </div>
         </div>
     </div>
+
     <!-- СЗИ_4 -->
     <div id="popup_info_uridictia" class="popup">
         <a href="#" class="popup__area"></a>

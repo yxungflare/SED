@@ -24,8 +24,9 @@ def index():
 def choose_model():
     model = request.form.get('model') 
     model2 = request.form.get('model2')
+    model3 = request.form.get('model3')
     print(request.form)
-    print(model, model2)
+    print(model, model2, model3)
     # СЗИ 1
     if model not in models and model and model != 'choose':
         models.append(model)
@@ -41,6 +42,8 @@ def choose_model():
     # СЗИ 2
     if model2 not in models and model2 and model2 != 'choose':
         models.append(model2)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model2]
+        # Проверяем уникальность для СЗИ 2
         if len(models) > 1 and model2 in model_set_2:
             for m in models:
                 if m != model2 and m in model_set_2:
@@ -48,10 +51,21 @@ def choose_model():
                         if elem[0] != model2 and elem[0] in model_set_2:
                             del update_models[update_models.index(elem)]
                     del models[models.index(m)]
-        [update_models.append(elem) for elem in SZI_models if elem[0] == model2]
+    # СЗИ 3
+    if model3 not in models and model3 and model3 != 'choose':
+        models.append(model3)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model3]
+        # Проверяем уникальность для СЗИ 3
+        if len(models) > 1 and model3 in model_set_3:
+            for m in models:
+                if m != model3 and m in model_set_3:
+                    for elem in update_models:
+                        if elem[0] != model3 and elem[0] in model_set_3:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
     print(models)
     print(update_models)
-    return render_template('page3.html', models=models, model=model, model2=model2)
+    return render_template('page3.html', models=models, model=model, model2=model2, model3=model3)
 
 
 @app.route("/page2.html")

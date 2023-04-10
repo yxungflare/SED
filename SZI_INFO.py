@@ -1,5 +1,7 @@
 model_set_1 = ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']
 model_set_2 = ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']
+model_set_3 = ['KARMA', 'EDSIGN', 'CryptoGOST', 'CryptoproZIP', 'CryptoARM']
+
 
 SZI_models = [
     # СЗИ 1
@@ -15,11 +17,11 @@ SZI_models = [
     ['Cryptopro', '54000', 'бла бла', '0.6'],
     ['VipNet', '54000', 'бла бла', '0.6'],
     # СЗИ 3
-    ['Rosomaha1', '54000', 'бла бла', '0.6'],
-    ['Rosomaha2', '54000', 'бла бла', '0.6'],
-    ['Rosomaha3', '54000', 'бла бла', '0.6'],
-    ['Rosomaha4', '54000', 'бла бла', '0.6'],
-    ['Rosomaha5', '54000', 'бла бла', '0.6'],
+    ['KARMA', '54000', 'бла бла', '0.6'],
+    ['EDSIGN', '54000', 'бла бла', '0.6'],
+    ['CryptoGOST', '54000', 'бла бла', '0.6'],
+    ['CryptoproZIP', '54000', 'бла бла', '0.6'],
+    ['CryptoARM', '54000', 'бла бла', '0.6'],
     # СЗИ 4
     ['Rosomaha6', '54000', 'бла бла', '0.6'],
     ['Rosomaha7', '54000', 'бла бла', '0.6'],

@@ -59,7 +59,7 @@
             <!-- СЗИ_4 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-3"/>
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-3" name="SZI4" {% if 'InfoTECHS' in models or 'SignPro' in models or 'CryptoPROPDF' in models or 'ECP-Tech' in models or 'AdobeSign' in models %}checked{% endif %}/>
                     <span class="checkbox-tile">
                         <a href="#popup_info_uridictia" id="icon_info-3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon" >
@@ -574,27 +574,90 @@
         <div class="popup__body">
             <div class="popup__content">
                 <a href="#" class="popup__close" onclick="visibleOn()">X</a>
-                <div class="popup__title">Сведения об обеспечении электронного документа юридической значимости</div>
+                <div class="popup__title">Выберете модель СЗИ</div>
                 <div class="popup__text">
-                    <form>
-                        <div class="formOfModalA">
-                            <div class="firstlineModalA">
-                                <select name="model" class="modalAuntification">
-                                    <option value="choose">Выберете модель</option>
-                                    <option value="pakSobol">Контур</option>
-                                    <option value="pakRosomaha">WiseadviceIT</option>
-                                    <option value="fantom">Directum</option>
-                                </select>
-                                <input type="number" placeholder="Выберете цену, ₽" class="pricemodalA">
-                            </div>
-                            <input type="number" name="Ur" class="koefOfDamage" placeholder="Введите Коэффициент потенциального ущерба, Ur = ">
+                    
+                    <div class="row">
+                        <!-- модель 1 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model4" value="InfoTECHS" class="checkbox-input" id="checkbox-input4_1" {% if 'InfoTECHS' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="/htdocs/SecretDisk.html" id="icon_info-4_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Infotex.png') }} "  style="height: 50px; width: 100px" alt="Sobol">
+                                    </span>
+                                    <span class="checkbox-label">ИнфоТеКС</span>
+                                </span>
+                            </label>
                         </div>
-                        <div class="choose__requirement">
-                            <div class="add__but">
-                                <a href="#" class="add__requirement"><button type="submit" class="calculate modalA" id="clear"> <b> Подтвердить </b></button></a>
-                            </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <!-- модель 2 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model4" value="SignPro" class="checkbox-input" id="checkbox-input4_2" {% if 'SignPro' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="/htdocs/VipNet.html" id="icon_info-4_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/SignPro.png') }}" style="height: 50px; width: 100px" alt="Rosomaha">
+                                    </span>
+                                    <span class="checkbox-label">SignPro</span>
+                                </span>
+                            </label>
                         </div>
-                    </form>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <!-- модель 3 -->
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" name="model4" value="DocuSign" class="checkbox-input" id="checkbox-input4_3" {% if 'CryptoPROPDF' in models %}checked{% endif %}>
+                                <span class="checkbox-tile">
+                                    <a href="/htdocs/Rutoken.html" id="icon_info-4_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                    <span class="checkbox-icon">
+                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/CryptoPRO.webp') }}" alt="Fantom">
+                                    </span>
+                                    <span class="checkbox-label">КриптоПро PDF</span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- !!!!!!!!!!!!!!!!!!!!!! --> 
+                </div>
+            
+                <div class="row">
+
+                    <!-- модель 4 -->
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper"  onclick="icon_on()">
+                            <input type="radio" name="model4" value="ECP-Tech" class="checkbox-input" id="checkbox-input4_4" {% if 'ECP-Tech' in models %}checked{% endif %}>
+                            <span class="checkbox-tile">
+                                <a href="/htdocs/Cryptopro.html" id="icon_info-4_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                <span class="checkbox-icon">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Infotex.png') }}"  style="height: 50px; width: 100px" alt="Accord">
+                                </span>
+                                <span class="checkbox-label">ЭЦП-Техно</span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+
+                    <!-- модель 5 -->
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper"  onclick="icon_on()">
+                            <input type="radio" name="model4" value="AdobeSign" class="checkbox-input" id="checkbox-input4_5" {% if 'AdobeSign' in models %}checked{% endif %}>
+                            <span class="checkbox-tile">
+                                <a href="/htdocs/PKIClient.html" id="icon_info-4_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                                <span class="checkbox-icon">
+                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Adobe Sign.jpg') }}" alt="BlockHost" >
+                                </span>
+                                <span class="checkbox-label">Adobe Sign</span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
+                            <button type="submit" id="clear" class="add__requirement" onclick="showSpinner();" target="_blank"> <b> Подтвердить </b></button>
+                    </div>
+
                 </div>
             </div>
         </div>

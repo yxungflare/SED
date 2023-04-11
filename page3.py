@@ -25,8 +25,9 @@ def choose_model():
     model = request.form.get('model') 
     model2 = request.form.get('model2')
     model3 = request.form.get('model3')
+    model4 = request.form.get('model4')
     print(request.form)
-    print(model, model2, model3)
+    print(model, model2, model3, model4)
     # СЗИ 1
     if model not in models and model and model != 'choose':
         models.append(model)
@@ -61,6 +62,18 @@ def choose_model():
                 if m != model3 and m in model_set_3:
                     for elem in update_models:
                         if elem[0] != model3 and elem[0] in model_set_3:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
+    # СЗИ 4
+    if model4 not in models and model4 and model4 != 'choose':
+        models.append(model4)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model4]
+        # Проверяем уникальность для СЗИ 4
+        if len(models) > 1 and model4 in model_set_4:
+            for m in models:
+                if m != model4 and m in model_set_4:
+                    for elem in update_models:
+                        if elem[0] != model4 and elem[0] in model_set_4:
                             del update_models[update_models.index(elem)]
                     del models[models.index(m)]
     print(models)

@@ -1,7 +1,7 @@
 model_set_1 = ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']
 model_set_2 = ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']
 model_set_3 = ['KARMA', 'EDSIGN', 'CryptoGOST', 'CryptoproZIP', 'CryptoARM']
-
+model_set_4 = ['InfoTECHS', 'SignPro', 'CryptoPROPDF', 'ECP-Tech', 'AdobeSign']
 
 SZI_models = [
     # СЗИ 1
@@ -23,11 +23,11 @@ SZI_models = [
     ['CryptoproZIP', '54000', 'бла бла', '0.6'],
     ['CryptoARM', '54000', 'бла бла', '0.6'],
     # СЗИ 4
-    ['Rosomaha6', '54000', 'бла бла', '0.6'],
-    ['Rosomaha7', '54000', 'бла бла', '0.6'],
-    ['Rosomaha8', '54000', 'бла бла', '0.6'],
-    ['Rosomaha9', '54000', 'бла бла', '0.6'],
-    ['Rosomaha0', '54000', 'бла бла', '0.6'],
+    ['InfoTECHS', '54000', 'бла бла', '0.6'],
+    ['SignPro', '54000', 'бла бла', '0.6'],
+    ['CryptoPROPDF', '54000', 'бла бла', '0.6'],
+    ['ECP-Tech', '54000', 'бла бла', '0.6'],
+    ['AdobeSign', '54000', 'бла бла', '0.6'],
     # СЗИ 5
     ['Rosomaha11', '54000', 'бла бла', '0.6'],
     ['Rosomaha12', '54000', 'бла бла', '0.6'],

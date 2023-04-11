@@ -245,6 +245,37 @@ function icon_on(){
   else{
     document.getElementById('icon_info-3_5').style.display='none';
   }
+  // Для выбора конкретной модели СЗИ4
+  if(document.getElementById('checkbox-input4_1').checked == true){
+    document.getElementById('icon_info-4_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-4_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input4_2').checked == true){
+    document.getElementById('icon_info-4_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-4_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input4_3').checked == true){
+    document.getElementById('icon_info-4_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-4_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input4_4').checked == true){
+    document.getElementById('icon_info-4_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-4_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input4_5').checked == true){
+    document.getElementById('icon_info-4_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-4_5').style.display='none';
+  }
 }
 
 

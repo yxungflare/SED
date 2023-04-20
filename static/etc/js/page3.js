@@ -431,6 +431,68 @@ function icon_on(){
   else{
     document.getElementById('icon_info-9_5').style.display='none';
   }
+  // Для выбора конкретной модели СЗИ10
+  if(document.getElementById('checkbox-input10_1').checked == true){
+    document.getElementById('icon_info-10_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-10_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input10_2').checked == true){
+    document.getElementById('icon_info-10_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-10_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input10_3').checked == true){
+    document.getElementById('icon_info-10_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-10_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input10_4').checked == true){
+    document.getElementById('icon_info-10_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-10_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input10_5').checked == true){
+    document.getElementById('icon_info-10_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-10_5').style.display='none';
+  }
+  // Для выбора конкретной модели СЗИ11
+  if(document.getElementById('checkbox-input11_1').checked == true){
+    document.getElementById('icon_info-11_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-11_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input11_2').checked == true){
+    document.getElementById('icon_info-11_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-11_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input11_3').checked == true){
+    document.getElementById('icon_info-11_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-11_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input11_4').checked == true){
+    document.getElementById('icon_info-11_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-11_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input11_5').checked == true){
+    document.getElementById('icon_info-11_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-11_5').style.display='none';
+  }
 }
 
 

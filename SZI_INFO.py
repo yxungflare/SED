@@ -7,6 +7,8 @@ model_set_6 = ['LogRhythm', 'Visor', 'Fortinet', 'MaxPatrol', 'SearchInfo']
 model_set_7 = ['SDE', 'CryptoARM_2', 'CryptoBD', 'PKZ2020' , 'Palindrom']
 model_set_8 = ['TrafficInspector', 'IdecoUTM', 'TrustAccess', 'ALTELLNEO' , 'ContinentAP']
 model_set_9 = ['Kaspersky', 'Avast', 'NordVPN', 'Astrill' , 'Surfshark']
+model_set_10 = ['KasperskyAnti-Virus', 'Dr.Web', 'NationalAntivirus', 'AntivirusMail' , 'Norton360']
+model_set_11 = ['AuditIB', 'SafeBusiness', 'AnalystIB', 'InfoSecure' , 'IBAuditExpert']
 
 SZI_models = [
     # СЗИ 1
@@ -64,15 +66,15 @@ SZI_models = [
     ['Astrill', '54000', 'бла бла', '0.6'],
     ['Surfshark', '54000', 'бла бла', '0.6'],
     # СЗИ 10
-    ['Rosomaha36', '54000', 'бла бла', '0.6'],
-    ['Rosomaha37', '54000', 'бла бла', '0.6'],
-    ['Rosomaha38', '54000', 'бла бла', '0.6'],
-    ['Rosomaha39', '54000', 'бла бла', '0.6'],
-    ['Rosomaha40', '54000', 'бла бла', '0.6'],
+    ['KasperskyAnti-Virus', '54000', 'бла бла', '0.6'],
+    ['Dr.Web', '54000', 'бла бла', '0.6'],
+    ['NationalAntivirus', '54000', 'бла бла', '0.6'],
+    ['AntivirusMail', '54000', 'бла бла', '0.6'],
+    ['Norton360', '54000', 'бла бла', '0.6'],
     # СЗИ 11
-    ['Rosomaha41', '54000', 'бла бла', '0.6'],
-    ['Rosomaha42', '54000', 'бла бла', '0.6'],
-    ['Rosomaha43', '54000', 'бла бла', '0.6'],
-    ['Rosomaha44', '54000', 'бла бла', '0.6'],
-    ['Rosomaha45', '54000', 'бла бла', '0.6']
+    ['AuditIB', '54000', 'бла бла', '0.6'],
+    ['SafeBusiness', '54000', 'бла бла', '0.6'],
+    ['AnalystIB', '54000', 'бла бла', '0.6'],
+    ['InfoSecure', '54000', 'бла бла', '0.6'],
+    ['IBAuditExpert', '54000', 'бла бла', '0.6']
 ]

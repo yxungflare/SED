@@ -26,8 +26,14 @@ def choose_model():
     model2 = request.form.get('model2')
     model3 = request.form.get('model3')
     model4 = request.form.get('model4')
+    model5 = request.form.get('model5')
+    model6 = request.form.get('model6')
+    model7 = request.form.get('model7')
+    model8 = request.form.get('model8')
+    model9 = request.form.get('model9')
+
     print(request.form)
-    print(model, model2, model3, model4)
+    print(model, model2, model3, model4, model5, model6, model7, model8)
     # СЗИ 1
     if model not in models and model and model != 'choose':
         models.append(model)
@@ -76,9 +82,75 @@ def choose_model():
                         if elem[0] != model4 and elem[0] in model_set_4:
                             del update_models[update_models.index(elem)]
                     del models[models.index(m)]
+
+    # СЗИ 5
+    if model5 not in models and model5 and model5 != 'choose':
+        models.append(model5)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model5]
+        # Проверяем уникальность для СЗИ 5
+        if len(models) > 1 and model5 in model_set_5:
+            for m in models:
+                if m != model5 and m in model_set_5:
+                    for elem in update_models:
+                        if elem[0] != model5 and elem[0] in model_set_5:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
+    
+    # СЗИ 6
+    if model6 not in models and model6 and model6 != 'choose':
+        models.append(model6)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model6]
+        # Проверяем уникальность для СЗИ 6
+        if len(models) > 1 and model6 in model_set_6:
+            for m in models:
+                if m != model6 and m in model_set_6:
+                    for elem in update_models:
+                        if elem[0] != model6 and elem[0] in model_set_6:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
+        
+    # СЗИ 7
+    if model7 not in models and model7 and model7 != 'choose':
+        models.append(model7)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model7]
+        # Проверяем уникальность для СЗИ 7
+        if len(models) > 1 and model7 in model_set_7:
+            for m in models:
+                if m != model7 and m in model_set_7:
+                    for elem in update_models:
+                        if elem[0] != model7 and elem[0] in model_set_7:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
+
+    # СЗИ 8
+    if model8 not in models and model8 and model8 != 'choose':
+        models.append(model8)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model8]
+        # Проверяем уникальность для СЗИ 8
+        if len(models) > 1 and model8 in model_set_8:
+            for m in models:
+                if m != model8 and m in model_set_8:
+                    for elem in update_models:
+                        if elem[0] != model8 and elem[0] in model_set_8:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
+    # СЗИ 9
+    if model9 not in models and model9 and model9 != 'choose':
+        models.append(model9)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model9]
+        # Проверяем уникальность для СЗИ 9
+        if len(models) > 1 and model9 in model_set_9:
+            for m in models:
+                if m != model9 and m in model_set_9:
+                    for elem in update_models:
+                        if elem[0] != model9 and elem[0] in model_set_9:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
     print(models)
     print(update_models)
-    return render_template('page3.html', models=models, model=model, model2=model2, model3=model3)
+    return render_template('page3.html', models=models, model=model, model2=model2, 
+                           model3=model3, model4=model4, model5=model5, model6=model6,
+                           model7=model7, model8=model8, model9=model9)
 
 
 @app.route("/page2.html")

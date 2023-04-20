@@ -276,6 +276,161 @@ function icon_on(){
   else{
     document.getElementById('icon_info-4_5').style.display='none';
   }
+  // Для выбора конкретной модели СЗИ5
+  if(document.getElementById('checkbox-input5_1').checked == true){
+    document.getElementById('icon_info-5_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-5_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input5_2').checked == true){
+    document.getElementById('icon_info-5_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-5_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input5_3').checked == true){
+    document.getElementById('icon_info-5_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-5_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input5_4').checked == true){
+    document.getElementById('icon_info-5_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-5_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input5_5').checked == true){
+    document.getElementById('icon_info-5_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-5_5').style.display='none';
+  }
+  // Для выбора конкретной модели СЗИ6
+  if(document.getElementById('checkbox-input6_1').checked == true){
+    document.getElementById('icon_info-6_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-6_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input6_2').checked == true){
+    document.getElementById('icon_info-6_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-6_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input6_3').checked == true){
+    document.getElementById('icon_info-6_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-6_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input6_4').checked == true){
+    document.getElementById('icon_info-6_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-6_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input6_5').checked == true){
+    document.getElementById('icon_info-6_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-6_5').style.display='none';
+  }
+  // Для выбора конкретной модели СЗИ7
+  if(document.getElementById('checkbox-input7_1').checked == true){
+    document.getElementById('icon_info-7_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-7_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input7_2').checked == true){
+    document.getElementById('icon_info-7_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-7_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input7_3').checked == true){
+    document.getElementById('icon_info-7_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-7_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input7_4').checked == true){
+    document.getElementById('icon_info-7_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-7_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input7_5').checked == true){
+    document.getElementById('icon_info-7_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-7_5').style.display='none';
+  }
+  // Для выбора конкретной модели СЗИ8
+  if(document.getElementById('checkbox-input8_1').checked == true){
+    document.getElementById('icon_info-8_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-8_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input8_2').checked == true){
+    document.getElementById('icon_info-8_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-8_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input8_3').checked == true){
+    document.getElementById('icon_info-8_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-8_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input8_4').checked == true){
+    document.getElementById('icon_info-8_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-8_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input8_5').checked == true){
+    document.getElementById('icon_info-8_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-8_5').style.display='none';
+  }
+  // Для выбора конкретной модели СЗИ9
+  if(document.getElementById('checkbox-input9_1').checked == true){
+    document.getElementById('icon_info-9_1').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-9_1').style.display='none';
+  }
+  if(document.getElementById('checkbox-input9_2').checked == true){
+    document.getElementById('icon_info-9_2').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-9_2').style.display='none';
+  }
+  if(document.getElementById('checkbox-input9_3').checked == true){
+    document.getElementById('icon_info-9_3').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-9_3').style.display='none';
+  }
+  if(document.getElementById('checkbox-input9_4').checked == true){
+    document.getElementById('icon_info-9_4').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-9_4').style.display='none';
+  }
+  if(document.getElementById('checkbox-input9_5').checked == true){
+    document.getElementById('icon_info-9_5').style.display='block';
+  }
+  else{
+    document.getElementById('icon_info-9_5').style.display='none';
+  }
 }
 
 

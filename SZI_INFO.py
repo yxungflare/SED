@@ -2,6 +2,11 @@ model_set_1 = ['Sobol', 'Rosomaha', 'Fantom', 'Accord', 'BlockHost']
 model_set_2 = ['Rutoken', 'PKIClient', 'Cryptopro', 'VipNet', 'SecretDisk']
 model_set_3 = ['KARMA', 'EDSIGN', 'CryptoGOST', 'CryptoproZIP', 'CryptoARM']
 model_set_4 = ['InfoTECHS', 'SignPro', 'CryptoPROPDF', 'ECP-Tech', 'AdobeSign']
+model_set_5 = ['SNS', 'Efros', 'ViPNetSafeBoot', 'Dallas', 'Passport']
+model_set_6 = ['LogRhythm', 'Visor', 'Fortinet', 'MaxPatrol', 'SearchInfo']
+model_set_7 = ['SDE', 'CryptoARM_2', 'CryptoBD', 'PKZ2020' , 'Palindrom']
+model_set_8 = ['TrafficInspector', 'IdecoUTM', 'TrustAccess', 'ALTELLNEO' , 'ContinentAP']
+model_set_9 = ['Kaspersky', 'Avast', 'NordVPN', 'Astrill' , 'Surfshark']
 
 SZI_models = [
     # СЗИ 1
@@ -29,35 +34,35 @@ SZI_models = [
     ['ECP-Tech', '54000', 'бла бла', '0.6'],
     ['AdobeSign', '54000', 'бла бла', '0.6'],
     # СЗИ 5
-    ['Rosomaha11', '54000', 'бла бла', '0.6'],
-    ['Rosomaha12', '54000', 'бла бла', '0.6'],
-    ['Rosomaha13', '54000', 'бла бла', '0.6'],
-    ['Rosomaha14', '54000', 'бла бла', '0.6'],
-    ['Rosomaha15', '54000', 'бла бла', '0.6'],
+    ['SNS', '54000', 'бла бла', '0.6'],
+    ['Efros', '54000', 'бла бла', '0.6'],
+    ['ViPNetSafeBoot', '54000', 'бла бла', '0.6'],
+    ['Dallas', '54000', 'бла бла', '0.6'],
+    ['Passport', '54000', 'бла бла', '0.6'],
     # СЗИ 6
-    ['Rosomaha16', '54000', 'бла бла', '0.6'],
-    ['Rosomaha17', '54000', 'бла бла', '0.6'],
-    ['Rosomaha18', '54000', 'бла бла', '0.6'],
-    ['Rosomaha19', '54000', 'бла бла', '0.6'],
-    ['Rosomaha10', '54000', 'бла бла', '0.6'],
+    ['LogRhythm', '54000', 'бла бла', '0.6'],
+    ['Visor', '54000', 'бла бла', '0.6'],
+    ['Fortinet', '54000', 'бла бла', '0.6'],
+    ['MaxPatrol', '54000', 'бла бла', '0.6'],
+    ['SearchInfo', '54000', 'бла бла', '0.6'],
     # СЗИ 7
-    ['Rosomaha21', '54000', 'бла бла', '0.6'],
-    ['Rosomaha22', '54000', 'бла бла', '0.6'],
-    ['Rosomaha23', '54000', 'бла бла', '0.6'],
-    ['Rosomaha24', '54000', 'бла бла', '0.6'],
-    ['Rosomaha25', '54000', 'бла бла', '0.6'],
+    ['SDE', '54000', 'бла бла', '0.6'],
+    ['CryptoARM_2', '54000', 'бла бла', '0.6'],
+    ['CryptoBD', '54000', 'бла бла', '0.6'],
+    ['PKZ2020', '54000', 'бла бла', '0.6'],
+    ['Palindrom', '54000', 'бла бла', '0.6'],
     # СЗИ 8
-    ['Rosomaha26', '54000', 'бла бла', '0.6'],
-    ['Rosomaha27', '54000', 'бла бла', '0.6'],
-    ['Rosomaha28', '54000', 'бла бла', '0.6'],
-    ['Rosomaha29', '54000', 'бла бла', '0.6'],
-    ['Rosomaha30', '54000', 'бла бла', '0.6'],
+    ['TrafficInspector', '54000', 'бла бла', '0.6'],
+    ['IdecoUTM', '54000', 'бла бла', '0.6'],
+    ['TrustAccess', '54000', 'бла бла', '0.6'],
+    ['ALTELLNEO', '54000', 'бла бла', '0.6'],
+    ['ContinentAP', '54000', 'бла бла', '0.6'],
     # СЗИ 9
-    ['Rosomaha31', '54000', 'бла бла', '0.6'],
-    ['Rosomaha32', '54000', 'бла бла', '0.6'],
-    ['Rosomaha33', '54000', 'бла бла', '0.6'],
-    ['Rosomaha34', '54000', 'бла бла', '0.6'],
-    ['Rosomaha35', '54000', 'бла бла', '0.6'],
+    ['Kaspersky', '54000', 'бла бла', '0.6'],
+    ['Avast', '54000', 'бла бла', '0.6'],
+    ['NordVPN', '54000', 'бла бла', '0.6'],
+    ['Astrill', '54000', 'бла бла', '0.6'],
+    ['Surfshark', '54000', 'бла бла', '0.6'],
     # СЗИ 10
     ['Rosomaha36', '54000', 'бла бла', '0.6'],
     ['Rosomaha37', '54000', 'бла бла', '0.6'],
@@ -71,4 +76,3 @@ SZI_models = [
     ['Rosomaha44', '54000', 'бла бла', '0.6'],
     ['Rosomaha45', '54000', 'бла бла', '0.6']
 ]
-     

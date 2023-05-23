@@ -32,9 +32,9 @@ def choose_model():
     model8 = request.form.get('model8')
     model9 = request.form.get('model9')
     model10 = request.form.get('model10')
+    model11 = request.form.get('model11')
 
     print(request.form)
-    print(model, model2, model3, model4, model5, model6, model7, model8)
     # СЗИ 1
     if model not in models and model and model != 'choose':
         models.append(model)
@@ -160,11 +160,24 @@ def choose_model():
                         if elem[0] != model10 and elem[0] in model_set_10:
                             del update_models[update_models.index(elem)]
                     del models[models.index(m)]
+
+    # СЗИ 11
+    if model11 not in models and model11 and model11 != 'choose':
+        models.append(model11)
+        [update_models.append(elem) for elem in SZI_models if elem[0] == model11]
+        # Проверяем уникальность для СЗИ 11
+        if len(models) > 1 and model11 in model_set_11:
+            for m in models:
+                if m != model11 and m in model_set_11:
+                    for elem in update_models:
+                        if elem[0] != model11 and elem[0] in model_set_11:
+                            del update_models[update_models.index(elem)]
+                    del models[models.index(m)]
     print(models)
     print(update_models)
     return render_template('page3.html', models=models, model=model, model2=model2, 
                            model3=model3, model4=model4, model5=model5, model6=model6,
-                           model7=model7, model8=model8, model9=model9, model10=model10)
+                           model7=model7, model8=model8, model9=model9, model10=model10, model11=model11)
 
 
 @app.route("/page2.html")
@@ -173,14 +186,39 @@ def choose_window():
 
 
 # Полная обработка
-# Нужно проработать: удалить элемент массива, если чекбокс не выбран 
 
 @app.route("/estimate", methods=['POST'])
 def estimate():
     if request.method == 'POST':
         print(models)
         if list(request.form)[0]:
-            return render_template('estimate.html', models=models)
+            total_price = 0
+            total_sec = 1.0
+            # Создаем массив, в котором будут хранится надежности компонентов
+            ur = []
+            # список угроз
+            menace = []
+
+            for m in models:
+                for i in SZI_models:
+                    if m in i:
+                        # Итоговая стоимость системы
+                        total_price += int(i[1])
+                        print(total_price)
+                        # Итоговая надежность системы
+                        ur.append(float(i[3]))
+                        print(ur)
+                        menace.append(i[2])
+
+            for reliability in ur:
+                total_sec *= (1 - reliability)
+            system_reliability = (1 - total_sec) * 100
+
+
+            # массив угроз и их покрытий
+            new_manace_ur = zip(menace, ur)
+            print(new_manace_ur)
+            return render_template('estimate.html', models=models, price=total_price, reliability=system_reliability, new_manace_ur=new_manace_ur)
     
 
 # Инфа о Соболе

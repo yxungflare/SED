@@ -179,9 +179,18 @@ def choose_model():
                            model3=model3, model4=model4, model5=model5, model6=model6,
                            model7=model7, model8=model8, model9=model9, model10=model10, model11=model11)
 
+@app.route("/page1.html")
+def choose_window():
+    return render_template('page1.html')
+
+
+@app.route("/ready")
+def ready_KSZ():
+    return render_template('ready.html')
+
 
 @app.route("/page2.html")
-def choose_window():
+def first_page():
     return render_template('page2.html')
 
 
@@ -213,7 +222,6 @@ def estimate():
             for reliability in ur:
                 total_sec *= (1 - reliability)
             system_reliability = (1 - total_sec) * 100
-
 
             # массив угроз и их покрытий
             new_manace_ur = zip(menace, ur)

@@ -1,56 +1,21 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <!-- Обязательные метатеги -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="etc\css\page2.css">
-    <!-- Bootstrap CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page2.css') }} ">
     <title>Оценка защищенности СЭД</title>
-    <link rel="stylesheet" href="etc\css\bootstrap-grid.min.css">
-  </head>
-    <body>
-        
-        <div class="secondpage">
-
-            <div class="typesed">
-
-                <div class="choose">
-                    Выберете тип сборки КСЗ СЭД
-                </div>
-
-                    <nav>
-                        <ul class="navigation">
-                            <li class="navigation-item">
-                                <div>
-                                    <a href="choose_ready_complex.html"><button type="button" class="button1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Выбрать готовый комплекс средств защиты СЭД">
-                                        <b>Готовая</b></button></a>
-                                </div>
-                                <div>
-                                    <a href="/"><button type="button" class="button2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Самостоятельно выбрать средства защиты информации"><b>Самостоятельная</b></button></a></div>
-                                </div>
-                            </li>
-                        </ul>
-                    <div class="back">
-                            <a href="page1.html"><button class="back"><b>Назад</b></button></a>
-                    </div>
-                    </nav>
-            </div>
-
+</head>
+<body>
+    <div class="container">
+        <div class="title">Выберете тип сборки КСЗ</div>
+        <div class="choose">
+            <a href="/ready">Готовая</a>
+            <a href="/">Самостоятельная</a>
         </div>
 
-
-
-        <script src="popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-        
-                    <script>
-                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-                    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                    return new bootstrap.Tooltip(tooltipTriggerEl)
-                    })
-                    </script>
+        <a href="page1.html" class="back">Назад</a>
+    </div>
 </body>
 </html>

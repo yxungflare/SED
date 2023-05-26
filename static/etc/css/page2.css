@@ -1,5 +1,7 @@
-* {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,74 +11,48 @@ body {
   background-size: cover;
 }
 
-.secondpage {
+.container{
+  background-color: rgb(249, 235, 218);
+  max-width: 30%;
+  padding: 9% 10%;
+  text-align: center;
   margin-top: 150px;
-  font-weight: 700;
-  color: midnightblue;
-}
-
-.typesed {
-  float: center;
-  padding: 40px;
-  width: 500px;
-  height: 360px;
-  margin: auto;
-  background-color: rgb(243, 219, 236);
-  border-radius: 15px;
-}
-
-button {
-  font-size: 30px;
-  max-width: 335px;
-  background-color: #3498D8;
-  border-bottom: 5px solid #2980B9;
-  padding: 10px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-}
-
-.choose {
-  font-size: 35px;
-}
-
-.button1 {
-  font-size: 27px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  -moz-text-align-last: left;
-       text-align-last: left;
-}
-
-.button2 {
-  -moz-text-align-last: left;
-       text-align-last: left;
-  font-size: 27px;
-}
-
-button:hover {
-  background-color: #39a5e9;
-}
-
-.back {
-  text-align: left;
-  margin-left: 35.7vh;
-  margin-top: -80px;
-  font-size: 27px;
-}
-
-.navigation {
-  list-style: none;
-  margin-top: 20px;
-  -moz-text-align-last: left;
-       text-align-last: left;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
-.navigation-item {
-  -moz-text-align-last: left;
-       text-align-last: left;
-  margin-left: -20px;
+.title{
+  /* border: 1px black solid; */
+  margin-top: -70%;
+  margin-bottom: 40%;
+  font-size: 30px;
+  color:darkslateblue;
+  font-weight: bold;
+}
+
+.choose{
   display: flex;
-}/*# sourceMappingURL=page2.css.map */
+  justify-content:space-around;
+  margin-bottom: 50%;
+}
+
+.back{
+  background-color: cornflowerblue;
+  font-weight: bold;
+  margin-left: -175%;
+}
+
+a{
+  margin-right: 20%;
+  text-decoration: none;
+  color: #000;
+  background-color: cornflowerblue;
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 5%;
+}
+
+a:last-child{
+  margin-right: 0;
+}

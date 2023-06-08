@@ -4,9 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page3.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/range-slider.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page3_1.css') }} ">
+    <title>Оценка защищенности СЭД</title>
 </head>
-<body>
-    Это страница для готовых КСЗ
+<body onload="icon_on()">
+    <!-- Форма считает, однако мат модель стоит изменить -->
+<form name="form1"  action="/estimate" method="POST" id="block-1">
+
+        <fieldset class="checkbox-group">
+            <legend class="checkbox-group-legend">Выберете подходящий КСЗ</legend>
+            <div class="row">
+            <!-- КЗИ_1 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_auntification" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_1.png) }} " alt="auntification">
+                        </span>
+                        <span class="checkbox-label" >КЗИ_1</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_2 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-1"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_authorED" id="icon_info-1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/ASupply.png') }}" alt="doc_accept">
+                        </span>
+                        <span class="checkbox-label">КЗИ_2</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_3 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-2"/>
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_confidition" id="icon_info-2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Confidential.png') }}" alt="doc_accept">
+                        </span>
+                        <span class="checkbox-label">КЗИ_3</span>
+                    </span>
+                </label>
+            </div>
+
+            <!-- КЗИ_4 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-3" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_uridictia" id="icon_info-3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon" >
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Juridical.png') }}" alt="ur_znach">
+                        </span>
+                        <span class="checkbox-label">КЗИ_4</span>
+                    </span>
+                </label>
+            </div>
+            </div> <br>
+            <div class="row">
+            <!-- КЗИ_5 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-4" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_integrity_control" id="icon_info-4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Integrity control.png') }}" alt="Control_PO">
+                        </span>
+                        <span class="checkbox-label">КЗИ_5</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_6 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-5" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_registration_actions" id="icon_info-5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/event registration.png') }}" alt="register_actions">
+                        </span>
+                        <span class="checkbox-label">КЗИ_6</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_7 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-6" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_cryptography" id="icon_info-6"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/cryptography.png') }}" alt="crypto_defense">
+                        </span>
+                        <span class="checkbox-label">КЗИ_7</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_8 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-7" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_firewall" id="icon_info-7"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/Firewall.png') }}" alt="mezhset">
+                        </span>
+                        <span class="checkbox-label">КЗИ_8</span>
+                    </span>
+                </label>
+            </div>
+            </div> 
+
+            <div class="row">
+            <!-- КЗИ_9 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-8" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_vpn" id="icon_info-8"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/VPN.png') }}" alt="VPN">
+                        </span>
+                        <span class="checkbox-label">КЗИ_9</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_10 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-9" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_antivirus" id="icon_info-9"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/antivirus.png') }}" alt="antivirus">
+                        </span>
+                        <span class="checkbox-label">КЗИ_10</span>
+                    </span>
+                </label>
+            </div>
+            <!-- КЗИ_11 -->
+            <div class="checkbox">
+                <label class="checkbox-wrapper"  onclick="icon_on()">
+                    <input type="checkbox" class="checkbox-input" id="checkbox-input-10" />
+                    <span class="checkbox-tile">
+                        <a href="#popup_info_audit" id="icon_info-10"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <span class="checkbox-icon">
+                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/audit.png') }}" alt="antauditivirus">
+                        </span>
+                        <span class="checkbox-label">КЗИ_11</span>
+                    </span>
+                </label>
+            </div>
+            </div>
+        </fieldset>
+
+            <div class="col-6">
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="page2.html" style="margin-top: 0;"> Назад</button></a>
+                        </li>
+
+                        <li class="navigation-item1">
+                            <button type="submit" id="countChecked" class="navigation-link1"> Оценить </button> <br>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+   
+
+<!-- ==================================================================================================== -->
+
+</form>
+<!-- ==================================================================================================== -->
+<!-- КОНЕЦ -->
+<script src="{{ url_for('static', filename='../static/etc/libs/nouislider.min.js') }} "></script>
+<script src="{{ url_for('static', filename='../static/etc/js/range-slider.js') }} "></script>
+<script src="{{ url_for('static', filename='../static/etc/js/page3.js') }} "></script>
+<script src="{{ url_for('static', filename='../static/etc/js/processing_dop_form.js') }} "></script>
 </body>
 </html>

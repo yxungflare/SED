@@ -1,6 +1,6 @@
-*{
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -11,48 +11,35 @@ body {
   background-size: cover;
 }
 
-.container{
-  background-color: rgb(249, 235, 218);
-  max-width: 30%;
-  padding: 9% 10%;
-  text-align: center;
-  margin-top: 150px;
+.container {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  padding: 24px 40px 112px 40px;
+  margin-top: 120px;
+  background-color: #7ED1E3;
+  border-radius: 10px;
+  max-width: 906px;
+  max-height: 400px;
 }
 
-.title{
-  /* border: 1px black solid; */
-  margin-top: -70%;
-  margin-bottom: 40%;
-  font-size: 30px;
-  color:darkslateblue;
-  font-weight: bold;
+.title {
+  text-align: center;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 115px;
 }
 
-.choose{
+.choose {
   display: flex;
-  justify-content:space-around;
-  margin-bottom: 50%;
+  justify-content: space-between;
 }
 
-.back{
-  background-color: cornflowerblue;
-  font-weight: bold;
-  margin-left: -175%;
-}
-
-a{
-  margin-right: 20%;
-  text-decoration: none;
+.choose a {
   color: #000;
-  background-color: cornflowerblue;
-  padding: 20px;
-  font-size: 25px;
-  border-radius: 5%;
-}
-
-a:last-child{
-  margin-right: 0;
-}
+  text-decoration: none;
+  padding: 24px 16px;
+  background-color: #3A9BF9;
+  border-radius: 10px;
+  font-size: 36px;
+}/*# sourceMappingURL=page2.css.map */

@@ -1,79 +1,46 @@
 *
 {
-    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body{
     background-image:url("https://krot.info/uploads/posts/2020-01/thumbs/1579377484_6-13.jpg");
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
-    // background-blend-mode: color;
     }
-.secondpage{
-    margin-top: 150px;
-    font-weight: 700;
-    color:midnightblue;
-}
-.typesed
-{
-    float: center;
-    padding: 40px;
-    width: 500px;
-    height: 360px;
-    // margin-left: auto;
-    // margin-right: auto;
-    margin: auto;
-    background-color: rgb(243, 219, 236);
-    border-radius: 15px;
-    
-}
-button{
-    font-size: 30px;
-    max-width: 335px;
-    background-color:#3498D8;
-	border-bottom: 5px solid #2980B9;
-    padding: 10px;
-    border-top: none;
-	border-right: none;
-	border-left: none;
-}
-.choose
-{
-    font-size: 35px;
-    margin-bottom: 15%;
-}
-.button1
-{
-    font-size: 27px;
-    margin-bottom: 30px;
-    // margin-right: 10%;
-    text-align-last: left;
-}
-.button2
-{
-    margin-left: 30%;
-    text-align-last: left;
-    font-size: 27px;
-}
-button:hover
-{
-    background-color:#39a5e9;
-}
-.back{
-    text-align: left;
-    margin-left: 35.7vh;
-    margin-top: -80px;
-    font-size: 27px;
-}
-.navigation{
-	list-style: none;
-    margin-top: 20px;
-    text-align-last: left;
+
+.container{
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 24px 40px 112px 40px;
+    margin-top: 120px;
+
+    background-color: #7ED1E3;
+    border-radius: 10px;
+    max-width: 906px;
+    max-height: 400px;
 }
-.navigation-item{
-    text-align-last: left;
-    margin-left: -20px;
+
+.title{
+    text-align: center;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 115px;
+}
+
+.choose{
     display: flex;
+    justify-content: space-between;
+}
+
+.choose a{
+    color: #000;
+    text-decoration: none;
+    padding: 24px 16px;
+    background-color: #3A9BF9;
+    border-radius: 10px;
+    font-size: 36px;
 }

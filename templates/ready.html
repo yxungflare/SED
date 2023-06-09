@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/nouislider.min.css') }} ">
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page3.css') }} ">
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/range-slider.css') }} ">
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/page3_1.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/ready.css') }} ">
     <title>Оценка защищенности СЭД</title>
 </head>
 <body onload="icon_on()">
@@ -25,7 +27,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_1.png') }} " alt="auntification">
                         </span>
-                        <span class="checkbox-label" >КСЗ_1</span>
+                        <span class="checkbox-label" >Гардалиан</span>
                     </span>
                 </label>
             </div>
@@ -38,7 +40,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_2.png') }}" alt="doc_accept">
                         </span>
-                        <span class="checkbox-label">КСЗ_2</span>
+                        <span class="checkbox-label">ТитанШилд</span>
                     </span>
                 </label>
             </div>
@@ -51,7 +53,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_3.png') }}" alt="doc_accept">
                         </span>
-                        <span class="checkbox-label">КСЗ_3</span>
+                        <span class="checkbox-label">СейфГард</span>
                     </span>
                 </label>
             </div>
@@ -65,7 +67,7 @@
                         <span class="checkbox-icon" >
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_4.png') }}" alt="ur_znach">
                         </span>
-                        <span class="checkbox-label">КСЗ_4</span>
+                        <span class="checkbox-label">ПротекТек</span>
                     </span>
                 </label>
             </div>
@@ -80,7 +82,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_5.png') }}" alt="Control_PO">
                         </span>
-                        <span class="checkbox-label">КСЗ_5</span>
+                        <span class="checkbox-label">ФортиФенс</span>
                     </span>
                 </label>
             </div>
@@ -93,7 +95,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_6.png') }}" alt="register_actions">
                         </span>
-                        <span class="checkbox-label">КСЗ_6</span>
+                        <span class="checkbox-label">ВирусСтоп</span>
                     </span>
                 </label>
             </div>
@@ -106,7 +108,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_7.png') }}" alt="crypto_defense">
                         </span>
-                        <span class="checkbox-label">КСЗ_7</span>
+                        <span class="checkbox-label">ГлобалЩит</span>
                     </span>
                 </label>
             </div>
@@ -119,7 +121,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_8.png') }}" alt="mezhset">
                         </span>
-                        <span class="checkbox-label">КСЗ_8</span>
+                        <span class="checkbox-label">АрморПротект</span>
                     </span>
                 </label>
             </div>
@@ -135,7 +137,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_9.png') }}" alt="VPN">
                         </span>
-                        <span class="checkbox-label">КСЗ_9</span>
+                        <span class="checkbox-label">ШифрЗона</span>
                     </span>
                 </label>
             </div>
@@ -148,7 +150,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_10.png') }}" alt="antivirus">
                         </span>
-                        <span class="checkbox-label">КСЗ_10</span>
+                        <span class="checkbox-label">БезопасНет</span>
                     </span>
                 </label>
             </div>
@@ -161,7 +163,7 @@
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_11.png') }}" alt="antauditivirus">
                         </span>
-                        <span class="checkbox-label">КСЗ_11</span>
+                        <span class="checkbox-label">СтражЭффект</span>
                     </span>
                 </label>
             </div>
@@ -173,17 +175,70 @@
                     <ul class="navigation">
 
                         <li class="navigation-item">
-                            <a class="navigation-link" href="page2.html" style="margin-top: 0;"> Назад</button></a>
+                            <a class="navigation-link" href="page2.html" style="margin-top: 0;"> Назад </a>
                         </li>
 
                         <li class="navigation-item1">
                             <button type="submit" id="countChecked" class="navigation-link1"> Оценить </button> <br>
                         </li>
                         
+                        <li class="navigation-item2">
+                            <a class="navigation-link1" href="#dop_info"> Дополнительная информация </a> <br>
+                        </li>
+
                     </ul>
                 </nav>
             </div>
    
+
+<!-- ==================================================ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ========================================================== -->
+<div id="dop_info" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+            
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Дополнительная информация</div>
+                <div class="popup__text">
+                    <div class="priority_title">Приоритет</div>
+                    <!--  -->
+                    <div class="choose_priority">
+
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" class="checkbox-input" id="checkbox-input-9" name="priority" value="secure" />
+                                <span class="checkbox-tile">
+                                    <span class="checkbox-label">Надежность</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper"  onclick="icon_on()">
+                                <input type="radio" class="checkbox-input" id="checkbox-input-9" name="priority" value="price" />
+                                <span class="checkbox-tile">
+                                    <span class="checkbox-label">Цена</span>
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <!-- Ползунок цены -->
+                    <div class="filters">
+                        <div class="filters__item filters-price">
+                            <h3 class="filters-price__title">Цена</h3>
+                            <div class="filter-price__slider"></div>
+                            <div class="filter_price__inputs">
+                                <input type="number" class="filters-price__input">
+                                <input type="number" class="filters-price__input">
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            
+            </div>
+        </div>
+</div>
+        
 
 <!-- ==================================================ВЫБОР МОДЕЛИ СЗИ АУНТИФИКАЦИИ================================================== -->
 <form name="podform" action="/" method="post">

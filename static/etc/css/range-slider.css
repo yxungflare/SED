@@ -1,7 +1,7 @@
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+.filters-price__title{
+    text-align: center;
 }
-input[type='number'] {
-    -moz-appearance: textfield;
+
+#price{
+    width: 100%;
 }

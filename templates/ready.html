@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/etc/css/ready.css') }} ">
     <title>Оценка защищенности СЭД</title>
 </head>
-<body onload="icon_on()">
+<body>
     <!-- Форма считает, однако мат модель стоит изменить -->
-<form name="form1"  action="/estimate" method="POST" id="block-1">
+<form name="ready_ksz"  action="" method="POST" id="block-1">
 
         <fieldset class="checkbox-group">
             <legend class="checkbox-group-legend">Выберете подходящий КСЗ</legend>
@@ -21,9 +21,9 @@
             <!-- СЗИ_1 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input" name="SZI1" />
+                    <input type="radio" name="ksz_models" value="Гардалиан" class="checkbox-input" id="checkbox-input" name="KSZ1"  {% if ksz_model=='Гардалиан' %}checked{% endif %}/>
                     <span class="checkbox-tile">
-                        <a href="#popup_info_auntification" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_1.png') }} " alt="auntification">
                         </span>
@@ -34,7 +34,7 @@
             <!-- СЗИ_2 -->
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-1" name="SZI2" />
+                    <input type="radio" name="ksz_models" value="ТитанШилд" class="checkbox-input" id="checkbox-input-1" name="KSZ2" {% if ksz_model=='ТитанШилд' %}checked{% endif %}/>
                     <span class="checkbox-tile">
                         <a href="#popup_info_authorED" id="icon_info-1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -44,7 +44,7 @@
                     </span>
                 </label>
             </div>
-            <!-- СЗИ_3 -->
+            <!-- СЗИ_3
             <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-2" name="SZI3" />
@@ -56,10 +56,10 @@
                         <span class="checkbox-label">СейфГард</span>
                     </span>
                 </label>
-            </div>
+            </div> -->
 
             <!-- СЗИ_4 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-3" name="SZI4" />
                     <span class="checkbox-tile">
@@ -72,9 +72,9 @@
                 </label>
             </div>
             </div> <br>
-            <div class="row">
+            <div class="row"> -->
             <!-- СЗИ_5 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-4" name="SZI5" />
                     <span class="checkbox-tile">
@@ -85,9 +85,9 @@
                         <span class="checkbox-label">ФортиФенс</span>
                     </span>
                 </label>
-            </div>
+            </div> -->
             <!-- СЗИ_6 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-5" name="SZI6" />
                     <span class="checkbox-tile">
@@ -98,9 +98,9 @@
                         <span class="checkbox-label">ВирусСтоп</span>
                     </span>
                 </label>
-            </div>
+            </div> -->
             <!-- СЗИ_7 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-6" name="SZI7" />
                     <span class="checkbox-tile">
@@ -111,9 +111,9 @@
                         <span class="checkbox-label">ГлобалЩит</span>
                     </span>
                 </label>
-            </div>
+            </div> -->
             <!-- СЗИ_8 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-7" name="SZI8" />
                     <span class="checkbox-tile">
@@ -127,9 +127,9 @@
             </div>
             </div> 
 
-            <div class="row">
+            <div class="row"> -->
             <!-- СЗИ_9 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-8" name="SZI9" />
                     <span class="checkbox-tile">
@@ -140,9 +140,9 @@
                         <span class="checkbox-label">ШифрЗона</span>
                     </span>
                 </label>
-            </div>
+            </div> -->
             <!-- СЗИ_10 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-9" name="SZI10" />
                     <span class="checkbox-tile">
@@ -152,10 +152,10 @@
                         </span>
                         <span class="checkbox-label">БезопасНет</span>
                     </span>
-                </label>
-            </div>
+                </label> -->
+            <!-- </div> -->
             <!-- СЗИ_11 -->
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-10" name="SZI11" />
                     <span class="checkbox-tile">
@@ -166,7 +166,8 @@
                         <span class="checkbox-label">СтражЭффект</span>
                     </span>
                 </label>
-            </div>
+            </div> -->
+
             </div>
         </fieldset>
 
@@ -192,146 +193,76 @@
    
 
 <!-- ==================================================ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ========================================================== -->
-<div id="dop_info" class="popup">
-        <div class="popup__body">
-            <div class="popup__content">
-            
-                <a href="#" class="popup__close">X</a>
-                <div class="popup__title">Дополнительная информация</div>
-                <div class="popup__text">
-                    <div class="priority_title">Приоритет</div>
-                    <!--  -->
-                    <div class="choose_priority">
-
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" class="checkbox-input" id="checkbox-input-9" name="priority" value="secure" />
-                                <span class="checkbox-tile">
-                                    <span class="checkbox-label">Надежность</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" class="checkbox-input" id="checkbox-input-9" name="priority" value="price" />
-                                <span class="checkbox-tile">
-                                    <span class="checkbox-label">Цена</span>
-                                </span>
-                            </label>
-                        </div>
-
-                    </div>
-                    <!-- Ползунок цены -->
-                    <div class="filters">
-                        <div class="filters__item filters-price">
-                            <h3 class="filters-price__title">Цена</h3>
-                            <div class="filter-price__slider"></div>
-                            <div class="filter_price__inputs">
-                                <input type="number" class="filters-price__input">
-                                <input type="number" class="filters-price__input">
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
-                </div>
-            
-            </div>
-        </div>
-</div>
+<form name="filter" action="/ready " method="post">
+    <div id="dop_info" class="popup">
         
+            <div class="popup__body">
+                <div class="popup__content">
+                
+                    <a href="#" class="popup__close">X</a>
+                    <div class="popup__title">Дополнительная информация</div>
+                    <div class="popup__text">
+                            <div class="priority_title">Приоритет вычислений</div>
+                            <!--  -->
+                            <div class="choose_priority">
 
-<!-- ==================================================ВЫБОР МОДЕЛИ СЗИ АУНТИФИКАЦИИ================================================== -->
-<form name="podform" action="/" method="post">
-    <!-- СЗИ_1 -->
-    <div id="popup_info_auntification" class="popup">
-        <div class="popup__body">
-            <div class="popup__content">
-                <a href="#" class="popup__close">X</a>
-                <div class="popup__title">Выберете модель СЗИ</div>
-                <div class="popup__text">
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="radio" class="checkbox-input" id="checkbox-input-9" name="priority" value="secure" {% if priority == 'secure' %}checked{% endif %}/>
+                                        <span class="checkbox-tile">
+                                            <span class="checkbox-label">Надежность</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapperdd">
+                                        <input type="radio" class="checkbox-input" id="checkbox-input-9" name="priority" value="price" {% if priority == 'price' %}checked{% endif %}/>
+                                        <span class="checkbox-tile">
+                                            <span class="checkbox-label">Цена</span>
+                                        </span>
+                                    </label>
+                                </div>
 
-                    <div class="row">
-                            <!-- модель 1 -->
-                            <div class="checkbox">
-                                <label class="checkbox-wrapper"  onclick="icon_on()">
-                                    <input type="radio" name="model" value="ПАК «Соболь»" class="checkbox-input" id="checkbox-input1_1" {% if 'ПАК «Соболь»' in models %}checked{% endif %}/>
-                                    <span class="checkbox-tile">
-                                        <a href="/htdocs/Sobol.html" id="icon_info-1_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                        <span class="checkbox-icon">
-                                            <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Sobol.png') }} " alt="ПАК «Соболь»">
-                                        </span>
-                                        <span class="checkbox-label">ПАК «Соболь»</span>
-                                    </span>
-                                </label>
                             </div>
-                            <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-                            
-                            <!-- модель 2 -->
-                            <div class="checkbox">
-                                <label class="checkbox-wrapper"  onclick="icon_on()">
-                                    <input type="radio" name="model" value="ПАК «Росомаха»" class="checkbox-input" id="checkbox-input1_2" {% if 'ПАК «Росомаха»' in models %}checked{% endif %}/>
-                                    <span class="checkbox-tile">
-                                        <a href="/htdocs/Rosomaha.html" id="icon_info-1_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                        <span class="checkbox-icon">
-                                            <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Rosomaha.jpg') }}" alt="ПАК «Росомаха»">
-                                        </span>
-                                        <span class="checkbox-label">ПАК «Росомаха»</span>
-                                    </span>
-                                </label>
+
+                            <br>
+                            <!-- Ползунок цены -->
+                            <div class="filters">
+                                    <h3 class="filters-price__title">Ориентировочная цена</h3>
+                                    <input type="range" name="price" id="price" min="0" max="1000000" value="{{ cash }}" step="10000" onchange="document.getElementById('rangeValue').innerHTML = this.value;" list="rangeList"> <span id="rangeValue">{{ cash }}</span> ₽</p>
+                                    <datalist id="rangeList">
+                                        <option value="0" label="0">
+                                        <option value="10000" label="10000">
+                                        <option value="50000" label="50000">
+                                        <option value="100000" label="100000">
+                                        <option value="250000" label="250000">
+                                        <option value="500000" label="500000">
+                                        <option value="1000000" label="1000000">
+                                    </datalist>
                             </div>
-                            <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-                            
-                            <!-- модель 3 -->
-                            <div class="checkbox">
-                                <label class="checkbox-wrapper"  onclick="icon_on()">
-                                    <input type="radio" name="model" value="СЗИ от НСД Фантом" class="checkbox-input" id="checkbox-input1_3" {% if 'СЗИ от НСД Фантом' in models %}checked{% endif %}/>
-                                    <span class="checkbox-tile">
-                                        <a href="/htdocs/Fantom.html" id="icon_info-1_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                        <span class="checkbox-icon">
-                                            <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Fantom.png') }}" alt="СЗИ от НСД Фантом">
-                                        </span>
-                                        <span class="checkbox-label">СЗИ от НСД Фантом</span>
-                                    </span>
-                                </label>
-                            </div>
-                            <!-- !!!!!!!!!!!!!!!!!!!!!! --> 
+                            <!--  -->
+
+
+                            <!-- Расчет -->
+                            <button type="submit" onclick="window.location.hash = '#'"> Выбрать </button>
+                         
                     </div>
                 
-                    <div class="row">
-
-                        <!-- Прописать Высвечивание иконки... -->
-
-
-                        <!-- модель 4 -->
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="ПАК «Аккорд-В.»" class="checkbox-input" id="checkbox-input1_4" {% if 'ПАК «Аккорд-В.»' in models %}checked{% endif %}/>
-                                <span class="checkbox-tile">
-                                    <a href="/htdocs/Accord.html" id="icon_info-1_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                    <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Accord.jpg') }}" alt="ПАК «Аккорд-В.»">
-                                    </span>
-                                    <span class="checkbox-label">ПАК «Аккорд-В.»</span>
-                                </span>
-                            </label>
-                        </div>
-                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-
-                        <!-- модель 5 -->
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model" value="Блокхост-Сеть" class="checkbox-input" id="checkbox-input1_5" {% if 'Блокхост-Сеть' in models %}checked{% endif %}/>
-                                <span class="checkbox-tile">
-                                    <a href="/htdocs/BlockHost.html" id="icon_info-1_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                    <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/BlockHost.webp') }}" alt="Блокхост-Сеть">
-                                    </span>
-                                    <span class="checkbox-label">Блокхост-Сеть</span>
-                                </span>
-                            </label>
-                        </div>
-                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-                                <button type="submit" id="clear" class="add__requirement" onclick="showSpinner();" target="_blank"> <b> Подтвердить </b></button>
+                </div>
+            </div>
+        
+    </div>    
+</form> 
+<!-- ==================================================ВЫБОР МОДЕЛИ СЗИ АУНТИФИКАЦИИ================================================== -->
+<form name="description" action="/ready" method="get">
+    <!-- СЗИ_1 -->
+    <div id="description" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_1
                     </div>
 
                 </div>

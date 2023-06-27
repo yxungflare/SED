@@ -10,6 +10,8 @@ app.config.from_object(__name__)
 models = []
 update_models = []
 
+models_ksz = []
+
 def clear_update_models():
     pass
 
@@ -184,9 +186,14 @@ def choose_window():
     return render_template('page1.html')
 
 
-@app.route("/ready")
+@app.route("/ready", methods=['POST', 'GET'])
 def ready_KSZ():
-    return render_template('ready.html')
+    priority = request.form.get('priority')
+    cash = request.form.get('price')
+    # current_model
+    ksz_model = request.form.get('ksz_models')
+    print(request.form)
+    return render_template('ready.html', priority=priority, cash=cash, ksz_model=ksz_model)
 
 
 @app.route("/page2.html")

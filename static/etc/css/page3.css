@@ -369,7 +369,8 @@ input#add__price {
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  width: 100vw;
+  justify-content: space-around;
   list-style: none;
 }
 

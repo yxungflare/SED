@@ -19,7 +19,7 @@
             <legend class="checkbox-group-legend">Выберете подходящий КСЗ</legend>
             <div class="row">
             <!-- СЗИ_1 -->
-            <div class="checkbox">
+            <div class="checkbox" {% if (cash - 500000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="Гардалиан" class="checkbox-input" id="checkbox-input" name="KSZ1"  {% if ksz_model=='Гардалиан' %}checked{% endif %}/>
                     <span class="checkbox-tile">
@@ -32,7 +32,7 @@
                 </label>
             </div>
             <!-- СЗИ_2 -->
-            <div class="checkbox">
+            <div class="checkbox" {% if (cash - 50000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ТитанШилд" class="checkbox-input" id="checkbox-input-1" name="KSZ2" {% if ksz_model=='ТитанШилд' %}checked{% endif %}/>
                     <span class="checkbox-tile">
@@ -44,8 +44,8 @@
                     </span>
                 </label>
             </div>
-            <!-- СЗИ_3
-            <div class="checkbox">
+            <!-- СЗИ_3 -->
+            <div class="checkbox" {% if (cash - 100000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-2" name="SZI3" />
                     <span class="checkbox-tile">
@@ -56,10 +56,10 @@
                         <span class="checkbox-label">СейфГард</span>
                     </span>
                 </label>
-            </div> -->
+            </div> 
 
             <!-- СЗИ_4 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 250000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-3" name="SZI4" />
                     <span class="checkbox-tile">
@@ -72,9 +72,9 @@
                 </label>
             </div>
             </div> <br>
-            <div class="row"> -->
+            <div class="row">
             <!-- СЗИ_5 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 600000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-4" name="SZI5" />
                     <span class="checkbox-tile">
@@ -85,9 +85,9 @@
                         <span class="checkbox-label">ФортиФенс</span>
                     </span>
                 </label>
-            </div> -->
+            </div>
             <!-- СЗИ_6 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 750000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-5" name="SZI6" />
                     <span class="checkbox-tile">
@@ -98,9 +98,9 @@
                         <span class="checkbox-label">ВирусСтоп</span>
                     </span>
                 </label>
-            </div> -->
+            </div>
             <!-- СЗИ_7 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 850000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-6" name="SZI7" />
                     <span class="checkbox-tile">
@@ -111,9 +111,9 @@
                         <span class="checkbox-label">ГлобалЩит</span>
                     </span>
                 </label>
-            </div> -->
+            </div>
             <!-- СЗИ_8 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 900000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-7" name="SZI8" />
                     <span class="checkbox-tile">
@@ -127,9 +127,9 @@
             </div>
             </div> 
 
-            <div class="row"> -->
+            <div class="row">
             <!-- СЗИ_9 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 150000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-8" name="SZI9" />
                     <span class="checkbox-tile">
@@ -140,9 +140,9 @@
                         <span class="checkbox-label">ШифрЗона</span>
                     </span>
                 </label>
-            </div> -->
+            </div>
             <!-- СЗИ_10 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 30000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-9" name="SZI10" />
                     <span class="checkbox-tile">
@@ -152,10 +152,10 @@
                         </span>
                         <span class="checkbox-label">БезопасНет</span>
                     </span>
-                </label> -->
-            <!-- </div> -->
+                </label>
+            </div>
             <!-- СЗИ_11 -->
-            <!-- <div class="checkbox">
+            <div class="checkbox" {% if (cash - 980000) ** 2 > 50000 ** 2 and check_cash  %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="checkbox" class="checkbox-input" id="checkbox-input-10" name="SZI11" />
                     <span class="checkbox-tile">
@@ -166,7 +166,7 @@
                         <span class="checkbox-label">СтражЭффект</span>
                     </span>
                 </label>
-            </div> -->
+            </div>
 
             </div>
         </fieldset>
@@ -245,7 +245,8 @@
 
                             <!-- Расчет -->
                             <button type="submit" onclick="window.location.hash = '#'"> Выбрать </button>
-                         
+                            <button type="reset"> Сбросить </button>
+
                     </div>
                 
                 </div>
@@ -262,7 +263,8 @@
                 <a href="#" class="popup__close">X</a>
                 <div class="popup__title">Описание</div>
                 <div class="popup__text">
-                    Крутое КСЗ_1
+                    Крутое КСЗ_1 <br>
+                    Цена: 500.000 Рублей 
                     </div>
 
                 </div>

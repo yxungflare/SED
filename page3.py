@@ -188,12 +188,18 @@ def choose_window():
 
 @app.route("/ready", methods=['POST', 'GET'])
 def ready_KSZ():
+    check_cash = 0
     priority = request.form.get('priority')
-    cash = request.form.get('price')
-    # current_model
+    if request.form.get('price'):
+        cash = int(request.form.get('price'))
+        check_cash = 1
+    else:
+        cash = 500000
     ksz_model = request.form.get('ksz_models')
-    print(request.form)
-    return render_template('ready.html', priority=priority, cash=cash, ksz_model=ksz_model)
+    # print(request.form)
+    return render_template('ready.html', priority=priority, cash=cash, check_cash=check_cash, ksz_model=ksz_model)
+
+
 
 
 @app.route("/page2.html")

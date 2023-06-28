@@ -196,9 +196,13 @@ def ready_KSZ():
     else:
         cash = 500000
     ksz_model = request.form.get('ksz_models')
-    # print(request.form)
+    print(request.form, check_cash)
+    if request.form.get('reset_data'):
+        check_cash = 0
+        cash = 500000
+        priority = ''
     return render_template('ready.html', priority=priority, cash=cash, check_cash=check_cash, ksz_model=ksz_model)
-
+# ====!==== 
 
 
 

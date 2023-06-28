@@ -47,7 +47,7 @@
             <!-- СЗИ_3 -->
             <div class="checkbox" {% if (cash - 100000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-2" name="SZI3" />
+                    <input type="radio" name="ksz_models" value="СейфГард" class="checkbox-input" id="checkbox-input-2" name="SZI3" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_confidition" id="icon_info-2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -61,7 +61,7 @@
             <!-- СЗИ_4 -->
             <div class="checkbox" {% if (cash - 250000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-3" name="SZI4" />
+                    <input type="radio" name="ksz_models" value="ПротекТек" class="checkbox-input" id="checkbox-input-3" name="SZI4" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_uridictia" id="icon_info-3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon" >
@@ -76,7 +76,7 @@
             <!-- СЗИ_5 -->
             <div class="checkbox" {% if (cash - 600000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-4" name="SZI5" />
+                    <input type="radio" name="ksz_models" value="ФортиФенс" class="checkbox-input" id="checkbox-input-4" name="SZI5" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_integrity_control" id="icon_info-4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -89,7 +89,7 @@
             <!-- СЗИ_6 -->
             <div class="checkbox" {% if (cash - 750000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-5" name="SZI6" />
+                    <input type="radio" name="ksz_models" value="ВирусСтоп" class="checkbox-input" id="checkbox-input-5" name="SZI6" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_registration_actions" id="icon_info-5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -102,7 +102,7 @@
             <!-- СЗИ_7 -->
             <div class="checkbox" {% if (cash - 850000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-6" name="SZI7" />
+                    <input type="radio" name="ksz_models" value="ГлобалЩит" class="checkbox-input" id="checkbox-input-6" name="SZI7" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_cryptography" id="icon_info-6"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -115,7 +115,7 @@
             <!-- СЗИ_8 -->
             <div class="checkbox" {% if (cash - 900000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-7" name="SZI8" />
+                    <input type="radio" name="ksz_models" value="АрморПротект" class="checkbox-input" id="checkbox-input-7" name="SZI8" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_firewall" id="icon_info-7"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -131,7 +131,7 @@
             <!-- СЗИ_9 -->
             <div class="checkbox" {% if (cash - 150000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-8" name="SZI9" />
+                    <input type="radio" name="ksz_models" value="ШифрЗона" class="checkbox-input" id="checkbox-input-8" name="SZI9" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_vpn" id="icon_info-8"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -144,7 +144,7 @@
             <!-- СЗИ_10 -->
             <div class="checkbox" {% if (cash - 30000) ** 2 > 50000 ** 2 and check_cash %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-9" name="SZI10" />
+                    <input type="radio" name="ksz_models" value="БезопасНет" class="checkbox-input" id="checkbox-input-9" name="SZI10" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_antivirus" id="icon_info-9"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -157,7 +157,7 @@
             <!-- СЗИ_11 -->
             <div class="checkbox" {% if (cash - 980000) ** 2 > 50000 ** 2 and check_cash  %} style="display: none;" {% endif %}>
                 <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-10" name="SZI11" />
+                    <input type="radio" name="ksz_models" value="СтражЭффект" class="checkbox-input" id="checkbox-input-10" name="SZI11" />
                     <span class="checkbox-tile">
                         <a href="#popup_info_audit" id="icon_info-10"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
@@ -245,7 +245,7 @@
 
                             <!-- Расчет -->
                             <button type="submit" onclick="window.location.hash = '#'"> Выбрать </button>
-                            <button type="reset"> Сбросить </button>
+                            <button type="submit" name="reset_data" value="reset_data"> Сбросить </button>
 
                     </div>
                 

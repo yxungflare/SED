@@ -23,7 +23,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="Гардалиан" class="checkbox-input" id="checkbox-input" name="KSZ1"  {% if ksz_model=='Гардалиан' %}checked{% endif %}/>
                     <span class="checkbox-tile">
-                        <a href="#description" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_1" id="icon_info"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_1.png') }} " alt="auntification">
                         </span>
@@ -36,7 +36,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ТитанШилд" class="checkbox-input" id="checkbox-input-1" name="KSZ2" {% if ksz_model=='ТитанШилд' %}checked{% endif %}/>
                     <span class="checkbox-tile">
-                        <a href="#popup_info_authorED" id="icon_info-1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_2" id="icon_info-1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_2.png') }}" alt="doc_accept">
                         </span>
@@ -49,7 +49,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="СейфГард" class="checkbox-input" id="checkbox-input-2" name="SZI3" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_confidition" id="icon_info-2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_3" id="icon_info-2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_3.png') }}" alt="doc_accept">
                         </span>
@@ -63,7 +63,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ПротекТек" class="checkbox-input" id="checkbox-input-3" name="SZI4" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_uridictia" id="icon_info-3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_4" id="icon_info-3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon" >
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_4.png') }}" alt="ur_znach">
                         </span>
@@ -78,7 +78,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ФортиФенс" class="checkbox-input" id="checkbox-input-4" name="SZI5" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_integrity_control" id="icon_info-4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_5" id="icon_info-4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_5.png') }}" alt="Control_PO">
                         </span>
@@ -91,7 +91,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ВирусСтоп" class="checkbox-input" id="checkbox-input-5" name="SZI6" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_registration_actions" id="icon_info-5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_6" id="icon_info-5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_6.png') }}" alt="register_actions">
                         </span>
@@ -104,7 +104,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ГлобалЩит" class="checkbox-input" id="checkbox-input-6" name="SZI7" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_cryptography" id="icon_info-6"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_7" id="icon_info-6"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_7.png') }}" alt="crypto_defense">
                         </span>
@@ -117,7 +117,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="АрморПротект" class="checkbox-input" id="checkbox-input-7" name="SZI8" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_firewall" id="icon_info-7"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_8" id="icon_info-7"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_8.png') }}" alt="mezhset">
                         </span>
@@ -133,7 +133,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="ШифрЗона" class="checkbox-input" id="checkbox-input-8" name="SZI9" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_vpn" id="icon_info-8"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_9" id="icon_info-8"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_9.png') }}" alt="VPN">
                         </span>
@@ -146,7 +146,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="БезопасНет" class="checkbox-input" id="checkbox-input-9" name="SZI10" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_antivirus" id="icon_info-9"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_10" id="icon_info-9"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_10.png') }}" alt="antivirus">
                         </span>
@@ -159,7 +159,7 @@
                 <label class="checkbox-wrapper"  onclick="icon_on()">
                     <input type="radio" name="ksz_models" value="СтражЭффект" class="checkbox-input" id="checkbox-input-10" name="SZI11" />
                     <span class="checkbox-tile">
-                        <a href="#popup_info_audit" id="icon_info-10"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
+                        <a href="#description_ksz_11" id="icon_info-10"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
                         <span class="checkbox-icon">
                             <img src="{{ url_for('static', filename='../static/etc/img/icon_ksz/ksz_11.png') }}" alt="antauditivirus">
                         </span>
@@ -257,21 +257,251 @@
 <!-- ==================================================ВЫБОР МОДЕЛИ СЗИ АУНТИФИКАЦИИ================================================== -->
 <form name="description" action="/ready" method="get">
     <!-- СЗИ_1 -->
-    <div id="description" class="popup">
+    <div id="description_ksz_1" class="popup">
         <div class="popup__body">
             <div class="popup__content">
                 <a href="#" class="popup__close">X</a>
                 <div class="popup__title">Описание</div>
                 <div class="popup__text">
                     Крутое КСЗ_1 <br>
-                    Цена: 500.000 Рублей 
-                    </div>
+                    Цена: 500.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
 
                 </div>
             </div>
         </div>
     </div>
+    <!-- !!! -->
 
+    <!-- СЗИ_2 -->
+    <div id="description_ksz_2" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_2 <br>
+                    Цена: 50.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_3 -->
+    <div id="description_ksz_3" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_3 <br>
+                    Цена: 100.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_4 -->
+    <div id="description_ksz_4" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_4 <br>
+                    Цена: 250.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_5 -->
+    <div id="description_ksz_5" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_5 <br>
+                    Цена: 600.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_6 -->
+    <div id="description_ksz_6" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    <h3>ВирусСтоп</h3>
+                    <p>Комплекс средств защиты "ВирусСтоп" обеспечивает гарантированную защиту против вирусных атак</p>
+                    Цена: 750.000 Рублей <br>
+                    Обеспечение надежности: 1000000% <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li><b>Kaspersky Anti-Virus </b> - для предотвращения вирусных атак</li>
+                        <li><b>MaxPatrol SIEM </b>-  для мониторинга событий информационной системы</li>
+                        <li><b>«КАРМА» </b>- для  обеспечения конфидициальности электронного документа</li>
+                        <li><b>Континент АП </b>- для функционирования межсетевого экранирования</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_7 -->
+    <div id="description_ksz_7" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_7 <br>
+                    Цена: 850.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_8 -->
+    <div id="description_ksz_8" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_8 <br>
+                    Цена: 900.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_9 -->
+    <div id="description_ksz_9" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    <h3>ШифрЗона</h3>
+                    <p>Комплекс средств защиты "ШифрЗона" ориентирован на поддержание криптографической защиты на заданном уровне </p>
+                    Цена: 150.000 Рублей <br>
+                    Обеспечение надежности: 1000000% <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li><b>Secret Disk Enterprise </b> - для создания и поддержания криптографической защиты</li>
+                        <li><b>LogRhythm SIEM </b>-  для мониторинга событий информационной системы</li>
+                        <li><b>Secret Disk 5 </b>- для подтверждения авторства электронного документа с помощью криптографического ключа</li>
+                        <li><b>ПАК "«Аккорд-В" </b>- для аунтификации пользователей и разделения доступа</li>
+                        <li><b>Secret Net Studio </b>- для контроля целостности используемого ПО</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_10 -->
+    <div id="description_ksz_10" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    <p>Комплекс средств защиты "Гардалиан" обеспечивает наилучшую надежность в показателе цена-надежность. </p>
+                    Цена: 300.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
+
+    <!-- СЗИ_11 -->
+    <div id="description_ksz_11" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Описание</div>
+                <div class="popup__text">
+                    Крутое КСЗ_11 <br>
+                    Цена: 980.000 Рублей <br>
+                    СЗИ: <br>
+                    <ul>
+                        <li>СЗИ_1</li>
+                        <li>СЗИ_2</li>
+                        <li>СЗИ_3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !!! -->
 </form>
 
 

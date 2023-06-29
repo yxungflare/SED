@@ -190,17 +190,19 @@ def choose_window():
 def ready_KSZ():
     check_cash = 0
     priority = request.form.get('priority')
+    ksz_model = request.form.get('ksz_models')
     if request.form.get('price'):
         cash = int(request.form.get('price'))
         check_cash = 1
+        ksz_model = ''
     else:
         cash = 500000
-    ksz_model = request.form.get('ksz_models')
-    print(request.form, check_cash)
+    print(request.form, ksz_model)
     if request.form.get('reset_data'):
         check_cash = 0
         cash = 500000
         priority = ''
+        ksz_model = ''
     return render_template('ready.html', priority=priority, cash=cash, check_cash=check_cash, ksz_model=ksz_model)
 # ====!==== 
 

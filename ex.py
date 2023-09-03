@@ -16,25 +16,22 @@ shape_system, loc_system, scale_system = weibull_min.fit(data_system, loc=0)
 x_system = np.linspace(0, max(data_system), 100)
 pdf_system = weibull_min.pdf(x_system, shape_system, loc_system, scale_system)
 
-# Сохраняем график PDF распределения Вейбулла для системы
+# График PDF распределения Вейбулла для системы
 plt.figure(figsize=(12, 4))
+plt.subplot(1, 2, 1)
 plt.plot(x_system, pdf_system, 'r-', lw=2)
 plt.xlabel('Время до отказа (часы)')
 plt.ylabel('Плотность вероятности')
 plt.title('PDF распределения Вейбулла для системы')
-plt.savefig('static/etc/img/graph1.png')  # Сохраняем график как '/static/img/graph1.png'
-plt.close()  # Закрываем текущий график, чтобы создать следующий
-
 
 # График функции надежности для системы (Survival Function)
 sf_system = 1 - weibull_min.cdf(x_system, shape_system, loc_system, scale_system)
 
-
-# Сохраняем график функции надежности для системы
-plt.figure(figsize=(12, 4))
+plt.subplot(1, 2, 2)
 plt.plot(x_system, sf_system, 'b-', lw=2)
 plt.xlabel('Время до отказа (часы)')
 plt.ylabel('Функция надежности')
 plt.title('График функции надежности для системы')
-plt.savefig('static/etc/img/graph2.png')  # Сохраняем график как '/static/img/graph2.png'
-plt.close()  # Закрываем текущий график
+
+plt.tight_layout()
+plt.show()

@@ -71,17 +71,17 @@
     </div>
 	<div id="sidebar">
 		<h2>Выбранные СЗИ:</h2>
-		<ul>
+		<ol>
 			{% for SZI in models %}
             <li >{{SZI}}</li>
             {% endfor %}
 		</ul>
 		<h2>Какие угрозы покрываются и с какой эффективностью?</h2>
-		<ul>
+		<ol>
 			{% for m, u in new_manace_ur %}
-			  <li>{{ m }} (эффективность {{ u * 100 }}%)</li>
+			  <li>  <ul> {% for ugroza in m %} <li> {{ugroza}} </li> {% endfor %} </ul> (эффективность {{ u * 100 }}%)</li>
 			{% endfor %}
-		</ul>
+		</ol>
 		  
 		  
 		<br>

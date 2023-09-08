@@ -2,6 +2,8 @@ from flask import Flask, request, render_template, g
 from SZI_INFO import *
 import os
 
+from graph import data
+
 SECRET_KEY = 'ffrfrmeknsdnsvkjk3nbhjzzzz'
 
 app = Flask(__name__)
@@ -163,18 +165,6 @@ def choose_model():
                             del update_models[update_models.index(elem)]
                     del models[models.index(m)]
 
-    # СЗИ 11
-    if model11 not in models and model11 and model11 != 'choose':
-        models.append(model11)
-        [update_models.append(elem) for elem in SZI_models if elem[0] == model11]
-        # Проверяем уникальность для СЗИ 11
-        if len(models) > 1 and model11 in model_set_11:
-            for m in models:
-                if m != model11 and m in model_set_11:
-                    for elem in update_models:
-                        if elem[0] != model11 and elem[0] in model_set_11:
-                            del update_models[update_models.index(elem)]
-                    del models[models.index(m)]
     print(models)
     print(update_models)
     return render_template('page3.html', models=models, model=model, model2=model2, 
@@ -245,6 +235,8 @@ def estimate():
             # массив угроз и их покрытий
             new_manace_ur = zip(menace, ur)
             print(new_manace_ur)
+
+            data(models)
             return render_template('estimate.html', models=models, price=total_price, reliability=system_reliability, new_manace_ur=new_manace_ur)
     
 

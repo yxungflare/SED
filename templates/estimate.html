@@ -66,8 +66,8 @@
 	<h1>Сформированный КСЗ</h1>
 	<div id="graph" style="text-align: center;">
         <h2 style="margin-top:1%;">График</h2>
-        <img src="{{ url_for('static', filename='../static/etc/img/graph1.png') }}" style="margin-bottom: 1%;" alt="">
-		<img src="{{ url_for('static', filename='../static/etc/img/graph2.png') }}" style="margin-bottom: 1%;" alt="">
+        <img src="{{ url_for('static', filename='../static/etc/img/graph1.png') }}" style="margin-bottom: 1%; width: 90%;" alt="">
+		<img src="{{ url_for('static', filename='../static/etc/img/graph2.png') }}" style="margin-bottom: 1%; width: 90%;" alt="">
     </div>
 	<div id="sidebar">
 		<h2>Выбранные СЗИ:</h2>
@@ -75,8 +75,9 @@
 			{% for SZI in models %}
             <li >{{SZI}}</li>
             {% endfor %}
+		</ol>
 		</ul>
-		<h2>Какие угрозы покрываются и с какой эффективностью?</h2>
+		<h2>Какие угрозы покрываются (и какие есть особенности) и с какой эффективностью?</h2>
 		<ol>
 			{% for m, u in new_manace_ur %}
 			  <li>  <ul> {% for ugroza in m %} <li> {{ugroza}} </li> {% endfor %} </ul> (эффективность {{ u * 100 }}%)</li>
@@ -85,12 +86,12 @@
 		  
 		  
 		<br>
-		<h2>Общая надежность КСЗ: {{reliability}} %</h2>
+		<h2>Общая надежность КСЗ: <br> {{reliability}} %</h2>
 		<!-- <p></p> -->
-		<h2>Цена КСЗ: {{price}} ₽</h2>
+		<h2>Цена КСЗ: <br> {{price}} ₽</h2>
 		<!-- <p></p> -->
+		<br>
+		<a class="navigation-link" href="/"> Назад</button></a>
 	</div>
-
-	<a class="navigation-link" href="/"> Назад</button></a>
 </body>
 </html>

@@ -152,19 +152,6 @@
                     </span>
                 </label>
             </div>
-            <!-- СЗИ_11 -->
-            <div class="checkbox">
-                <label class="checkbox-wrapper"  onclick="icon_on()">
-                    <input type="checkbox" class="checkbox-input" id="checkbox-input-10" name="SZI11" {% if 'Аудит ИБ' in models or 'Безопасный бизнес' in models or 'Аналитик ИБ' in models or 'ИнфоБезопасность' in models or 'Аудит ИБ Эксперт' in models %}checked{% endif %}/>
-                    <span class="checkbox-tile">
-                        <a href="#popup_info_audit" id="icon_info-10"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                        <span class="checkbox-icon">
-                            <img src="{{ url_for('static', filename='../static/etc/img/icon_szi/audit.png') }}" alt="antauditivirus">
-                        </span>
-                        <span class="checkbox-label">Аудит информационной безопасности</span>
-                    </span>
-                </label>
-            </div>
             </div>
         </fieldset>
 
@@ -1224,102 +1211,6 @@
                                     <img src="{{ url_for('static', filename='../static/etc/img/model_icon/NationalAntivirus.png') }}" style="height: 50px; width: 100px" alt="Национальный антивирус" >
                                 </span>
                                 <span class="checkbox-label">Национальный антивирус</span>
-                            </span>
-                        </label>
-                    </div>
-                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-                            <button type="submit" id="clear" class="add__requirement" onclick="showSpinner();" target="_blank"> <b> Подтвердить </b></button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- СЗИ_11 -->
-
-    <div id="popup_info_audit" class="popup">
-        <a href="#" class="popup__area"></a>
-        <div class="popup__body">
-            <div class="popup__content">
-                <a href="#" class="popup__close" onclick="visibleOn()">X</a>
-                <div class="popup__title">Выберете модель СЗИ</div>
-                <div class="popup__text">
-                    
-                    <div class="row">
-                        <!-- модель 1 -->
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model11" value="Аудит ИБ" class="checkbox-input" id="checkbox-input11_1" {% if 'Аудит ИБ' in models %}checked{% endif %}>
-                                <span class="checkbox-tile">
-                                    <a href="/htdocs/SecretDisk.html" id="icon_info-11_1"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                    <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Kaspersky.jpg') }} "  style="height: 60px; width: 100px" alt="Аудит ИБ">
-                                    </span>
-                                    <span class="checkbox-label">Аудит ИБ</span>
-                                </span>
-                            </label>
-                        </div>
-                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-                        
-                        <!-- модель 2 -->
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model11" value="Безопасный бизнес" class="checkbox-input" id="checkbox-input11_2" {% if 'Безопасный бизнес' in models %}checked{% endif %}>
-                                <span class="checkbox-tile">
-                                    <a href="/htdocs/VipNet.html" id="icon_info-11_2"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                    <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Infotex.png') }}" style="height: 40px; width: 100px" alt="Безопасный бизнес">
-                                    </span>
-                                    <span class="checkbox-label">Безопасный бизнес</span>
-                                </span>
-                            </label>
-                        </div>
-                        <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-                        
-                        <!-- модель 3 -->
-                        <div class="checkbox">
-                            <label class="checkbox-wrapper"  onclick="icon_on()">
-                                <input type="radio" name="model11" value="Аналитик ИБ" class="checkbox-input" id="checkbox-input11_3" {% if 'Аналитик ИБ' in models %}checked{% endif %}>
-                                <span class="checkbox-tile">
-                                    <a href="/htdocs/Rutoken.html" id="icon_info-11_3"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                    <span class="checkbox-icon">
-                                        <img src="{{ url_for('static', filename='../static/etc/img/model_icon/AnalystIB.png') }}" alt="Аналитик ИБ">
-                                    </span>
-                                    <span class="checkbox-label">Аналитик ИБ</span>
-                                </span>
-                            </label>
-                        </div>
-                        <!-- !!!!!!!!!!!!!!!!!!!!!! --> 
-                </div>
-            
-                <div class="row">
-
-                    <!-- модель 4 -->
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper"  onclick="icon_on()">
-                            <input type="radio" name="model11" value="ИнфоБезопасность" class="checkbox-input" id="checkbox-input11_4" {% if 'ИнфоБезопасность' in models %}checked{% endif %}>
-                            <span class="checkbox-tile">
-                                <a href="/htdocs/Cryptopro.html" id="icon_info-11_4"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                <span class="checkbox-icon">
-                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/Norton360.png') }}"  style="height: 50px; width: 100px" alt="ИнфоБезопасность">
-                                </span>
-                                <span class="checkbox-label">ИнфоБезопасность</span>
-                            </span>
-                        </label>
-                    </div>
-                    <!-- !!!!!!!!!!!!!!!!!!!!!! -->
-
-                    <!-- модель 5 -->
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper"  onclick="icon_on()">
-                            <input type="radio" name="model11" value="Аудит ИБ Эксперт" class="checkbox-input" id="checkbox-input11_5" {% if 'Аудит ИБ Эксперт' in models %}checked{% endif %}>
-                            <span class="checkbox-tile">
-                                <a href="/htdocs/PKIClient.html" id="icon_info-11_5"><img src="{{ url_for('static', filename='../static/etc/img/icon_info.png') }}" alt="info"></a>
-                                <span class="checkbox-icon">
-                                    <img src="{{ url_for('static', filename='../static/etc/img/model_icon/NationalAntivirus.png') }}" style="height: 50px; width: 100px" alt="Аудит ИБ Эксперт" >
-                                </span>
-                                <span class="checkbox-label">Аудит ИБ Эксперт</span>
                             </span>
                         </label>
                     </div>

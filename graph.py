@@ -4,7 +4,7 @@ from scipy.stats import weibull_min
 from SZI_INFO import data_szi
 
 data_system = []
-
+data_recovery = [100, 150, 50, 200]
 
 def data(data_array):
     global data_system
@@ -16,13 +16,15 @@ def data(data_array):
     print('#####################################')
     print(data_system)
     # Объединяем данные времени до отказа для обоих компонентов
-
+    # Сглаживаем данные с использованием медианных значений
+    data_system = [value for value in data_system if np.isfinite(value)]
+    data_recovery = [value for value in data_recovery if np.isfinite(value)]
 
     # Оцениваем параметры распределения Вейбулла для системы
     shape_system, loc_system, scale_system = weibull_min.fit(data_system, loc=0)
 
     # Генерируем данные для графика PDF для системы
-    x_system = np.linspace(0, max(data_system), 100)
+    x_system = np.linspace(0, max(data_system) + max(data_recovery), 100)
     pdf_system = weibull_min.pdf(x_system, shape_system, loc_system, scale_system)
 
     # Сохраняем график PDF распределения Вейбулла для системы
@@ -34,10 +36,8 @@ def data(data_array):
     plt.savefig('static/etc/img/graph1.png')  # Сохраняем график как '/static/img/graph1.png'
     plt.close()  # Закрываем текущий график, чтобы создать следующий
 
-
     # График функции надежности для системы (Survival Function)
     sf_system = 1 - weibull_min.cdf(x_system, shape_system, loc_system, scale_system)
-
 
     # Сохраняем график функции надежности для системы
     plt.figure(figsize=(12, 4))
